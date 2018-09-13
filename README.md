@@ -370,7 +370,7 @@ def year_archive(request, year):
 
 An example of it is - 
 
-```HTML5
+```html
 
 {% extends "base.html" %}
 
