@@ -45,6 +45,22 @@ while True:
 
 Once data is received by the BBC MicroBit that is attached to an Arduino, The Arduino then transmits the data onto the 4G network, to make it available for further analysis. This component is attached to a display board which is located near a sidewalk close to the Plenty River. This board uses 4 LEDs indicators to show the water quality at a particular time. This  board also educates information about the platypuses which live in the river. This component also uses solar panels to get power.
 
+Coloured LEDs will give an indication of water pollution. Large 10mm LEDs were connected to 180 ohm resistors.
+
+> Red - Highly Polluted - connected to pin 12
+>
+> Orange - Bad - connected to pin 8
+>
+> Green - Good - connected to pin 16
+>
+> Blue - Excellent - connected to pin 0
+
+The LEDs are connected to pins 12 and 8, and pins 16 and 0 of the BBC Micro:bit Motor Drive board Version2.
+
+Pins 12 and 8 belong to one H Bridge Driver chip. Either pin 12 or pin 8 can be active (HIGH), but not both. Pins 16 and 0 belong to the second H Bridge Driver chip. Either pin 16 or pin 0 can be active (HIGH), but not both.
+
+The board is designed to run motors (in pairs) and as such the pins are connected in pairs. The motor driver board uses a H Bridge driver chip, and as such if you try to run both pins at the same time the H bridge will automatically shut down to prevent damage.
+
 ##### Data Receiver and Storage Component
 
 This component consists of a BBC Microbit that receives the data from cloud using 4G network and then pass that data to Raspberry Pi via serial port using decoder settings ‘UTF-8’. The Raspberry Pi process the data and save it in the data storage location. Data is stored in 3 separate data storage locations for pH, Conductivity and Temperature.
@@ -387,3 +403,188 @@ An example of it is -
 {% endblock %}
 
 ``` 
+
+This is where Jinja comes in.
+
+Jinja2 is a modern and designer-friendly templating language for Python, modelled after Django’s templates. It is fast, widely used and secure with the optional sandboxed template execution environment.
+
+#### Running a Local Server
+
+To run a test for you web project, simply - 
+
+```Bash
+
+python manage.py runserver
+
+```
+
+Make sure that when you are testing that `DEBUG` in `settings.py` is set to `TRUE`. When wanting to deploy your website, then set the value of `DEBUG` to `FALSE`.
+
+### Matplotlib
+#### Getting Started
+
+> You can create a line plot with text labels using `plot()`
+>
+> Multiple axes (i.e. subplots) are created with the`subplot()` function
+>
+> Matplotlib can display images (assuming equally spaced horizontal dimensions) using the `imshow()` function
+>
+> The `pcolormesh()` function can make a colored representation of a two-dimensional array, even if the horizontal dimensions are unevenly spaced. The `contour()` function is another way to represent the same data
+>
+> The`hist()` function automatically generates histograms and returns the bin counts or probabilities
+>
+> You can add arbitrary paths in Matplotlib using the `matplotlib.path` module
+>
+> The mplot3d toolkit (see Getting started and 3D plotting) has support for simple 3d graphs including surface, wireframe, scatter, and bar charts.
+>
+
+#### More Complicated Stuff
+
+`matplotlib.pyplot` is a collection of command style functions that make matplotlib work like MATLAB. Each pyplot function makes some change to a figure: e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot with labels, etc.
+
+In `matplotlib.pyplot` various states are preserved across function calls, so that it keeps track of things like the current figure and plotting area, and the plotting functions are directed to the current axes (please note that “axes” here and in most places in the documentation refers to the axes part of a figure and not the strict mathematical term for more than one axis).
+
+Generating visualizations with pyplot is very quick:
+
+```Python
+
+import matplotlib.pyplot as plt
+plt.plot([1, 2, 3, 4])
+plt.ylabel('some numbers')
+plt.show()
+
+```
+
+to...
+
+There are some instances where you have data in a format that lets you access particular variables with strings. For example, with `numpy.recarray` or `pandas.DataFrame`.
+
+Matplotlib allows you provide such an object with the data keyword argument. If provided, then you may generate plots with the strings corresponding to these variables.
+
+```Python
+
+data = {'a': np.arange(50),
+        'c': np.random.randint(0, 50, 50),
+        'd': np.random.randn(50)}
+data['b'] = data['a'] + 10 * np.random.randn(50)
+data['d'] = np.abs(data['d']) * 100
+
+plt.scatter('a', 'b', c='c', s='d', data=data)
+plt.xlabel('entry a')
+plt.ylabel('entry b')
+plt.show()
+
+```
+
+#### Why Use Matplotlib
+
+Matplotlib is a very efficient way
+### Datetime
+#### Using It
+
+Python also has `datetime` which allows you to accurately get the time. If you want to find out what time it is, simply -
+
+```Python
+
+from datetime import *
+
+present = datetime.datetime.now()
+print(present)
+
+```
+
+You can also format it and compare them -
+
+```Python
+from datetime import datetime
+
+pullData = open("sampleText.txt", "r").read()
+dataList = pullData.split('\n')
+xList = []
+yList = []
+fmt = '%Y-%m-%d %H:%M:%S.%f'
+for eachLine in dataList:
+    if len(eachLine) > 1:
+        x, y = eachLine.split(',')
+        timestamp1 = datetime.strptime(x, fmt)
+        timestamp2 = datetime.strptime(str(datetime.now()), fmt)
+        interval = (timestamp2 - timestamp1)
+        if interval.days <= 1:
+            date, time = x.split(' ')
+            
+```
+
+You can find the present day, month, year, decade... simply type -
+
+```Python
+
+import datetime.datetime as present
+
+print(present.day)
+print(present.month)
+print(present.minute)
+print(present.second)
+print(present.year)
+
+```
+
+And so on...
+
+You can then use in Matplotlib on one of the axes. Copy as follows (if you want to do that) - 
+
+**NOTE** - THIS IS NOT THE ENTIRE PART. IN ORDER FOR IT TO RUN, YOU NEED THE ENTIRE CODE (besides classes `PageOne` and `PageTwo` and the content in it). THIS IS ONLY THE BIT OF CODE WHICH PUTS THE DATES ON THE X-AXIS.
+
+```Python
+
+xAxisDateTime = str(timestamp1.date()) + " " + str(timestamp1.hour) + ":" + str(timestamp1.minute)
+xList.append(xAxisDateTime)
+yList.append(int(y))
+a.clear()
+a.plot(xList, yList)
+f.autofmt_xdate()
+
+```
+
+### More Information
+
+> https://matplotlib.org/gallery/user_interfaces/embedding_in_tk_canvas_sgskip.html
+>
+> https://matplotlib.org/tutorials/introductory/customizing.html#sphx-glr-tutorials-introductory-customizing-py
+>
+> https://matplotlib.org/tutorials/index.html
+>
+> https://matplotlib.org/
+>
+> https://www.python-course.eu/tkinter_buttons.php
+>
+> https://pypi.org/project/weather-api/
+>
+> https://github.com/PlatypusProject/Platypus-Monitoring-Project
+>
+> https://github.com/rudrathegreat/Water-Quality-Checking-System
+>
+> https://github.com/rudrathegreat/Microbit-Projects
+>
+> https://www.python.org
+>
+> https://docs.djangoproject.com/en/2.1/intro/overview/
+> 
+> https://www.youtube.com/watch?v=D6esTdOLXh4
+>
+> https://microbit.org/
+>
+> https://www.arduino.cc/
+>
+> http://jinja.pocoo.org/docs/2.10/
+>
+> https://www.djangoproject.com/
+
+### Author
+
+> Rudra
+>
+> https://github.com/rudrathegreat/
+
+### News
+
+> Got a Basic Graph On The Page
