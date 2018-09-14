@@ -594,3 +594,5 @@ f.autofmt_xdate()
 > v3 - Got Data From Data Storage Location Onto the Page
 >
 > v4 - Fixed a Glitch : Graph was Being Cropped
+>
+> v5 - Multiple Graphs and Navigation System on Website
