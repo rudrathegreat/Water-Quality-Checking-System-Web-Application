@@ -587,4 +587,6 @@ f.autofmt_xdate()
 
 ### News
 
-> Got a Basic Graph On The Page
+> v1 - Got a Basic Non-Linear Graph On The Page
+>
+> v2 - Got a Basic Linear Graph On The Page
