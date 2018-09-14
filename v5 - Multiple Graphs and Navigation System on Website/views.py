@@ -1,35 +1,27 @@
 from _pydecimal import Decimal
 import PIL
-# import numpy as np
 import pylab
 from django.shortcuts import render
 from django.http import HttpResponse
-# import random
 import datetime
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-# from matplotlib.backends.backend_template import FigureCanvas
 from matplotlib.figure import Figure
-# from matplotlib.dates import DateFormatter
 from matplotlib import pyplot as plt, style
 import io
 from datetime import *
-# from matplotlib.pyplot import figure, axes, plot, xlabel, ylabel, title, grid
 
 DataFilePathTemperature = "D:/Rudra/VirtualEnv/WaterQualitySystem 2 - LIVE/Data/files/Temperature.txt"
 DataFilePathConductivity = "D:/Rudra/VirtualEnv/WaterQualitySystem 2 - LIVE/Data/files/Conductivity.txt"
 DataFilePathpH = "D:/Rudra/VirtualEnv/WaterQualitySystem 2 - LIVE/Data/files/pH.txt"
-style.use("ggplot")
 
+style.use("ggplot")
 
 # Create your views here.
 
 
 def index(request):
-    context = {
-        'image_name': 'Temperature Data',
-        'image': 'D:/Rudra/VirtualEnv/WaterQualitySystem/images/image.jpeg'
-    }
-    return render(request, template_name='data/data.html', context=context)
+
+    return render(request, template_name='data/data.html')
 
 
 def Last24HoursTemperature(request):
