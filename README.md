@@ -592,3 +592,5 @@ f.autofmt_xdate()
 > v2 - Got a Basic Linear Graph On The Page
 >
 > v3 - Got Data From Data Storage Location Onto the Page
+>
+> v4 - Fixed a Glitch : Graph was Being Cropped
