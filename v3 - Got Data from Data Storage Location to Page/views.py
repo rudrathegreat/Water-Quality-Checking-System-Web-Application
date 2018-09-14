@@ -30,42 +30,6 @@ def index(request):
 
 def graphTest(request):
 
-    # Construct the graph
-    # t = np.arange(0.0, 2.0, 0.01)
-    # s = np.sin(2 * np.pi * t)
-    # plot(t, s, linewidth=1.0)
-    #
-    # xlabel('Also Random Stuff')
-    # ylabel('Random Stuff')
-    # title('A Graph')
-    # grid(True)
-    #
-    # # Store image in a string buffer
-    # buffer = io.BytesIO()
-    # canvas = pylab.get_current_fig_manager().canvas
-    # canvas.draw()
-    # pilImage = PIL.Image.frombytes("RGB", canvas.get_width_height(), canvas.tostring_rgb())
-    # pilImage.save(buffer, "PNG")
-    # pylab.close()
-    #
-    # # Send buffer in a http response the the browser with the mime type image/png set
-    # return HttpResponse(buffer.getvalue(), content_type="image/png")
-
-    # fig = Figure()
-    # ax = fig.add_subplot(111)
-    # ax.plot([1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6])
-    # xlabel('Also Random Stuff')
-    # ylabel('Random Stuff')
-    #
-    # buffer = io.BytesIO()
-    # canvas = FigureCanvasAgg(fig)
-    # canvas.draw()
-    # pilImage = PIL.Image.frombytes("RGB", canvas.get_width_height(), canvas.tostring_rgb())
-    # pilImage.save(buffer, "PNG")
-    # pylab.close()
-    # # Send buffer in a http response the the browser with the mime type image/png set
-    # return HttpResponse(buffer.getvalue(), content_type="image/png")
-
     LARGE_FONT = ("Verdana", 16)
     MEDIUM_FONT = ("Verdana", 12)
     style.use("ggplot")
