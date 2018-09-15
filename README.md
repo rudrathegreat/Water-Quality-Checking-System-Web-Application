@@ -597,6 +597,6 @@ f.autofmt_xdate()
 >
 > v5 - Multiple Graphs and Navigation System on Website
 >
-> v6 - Multiple Graphs and Navigation System on Website
+> v6 - Created Home Page and Updated Navigation System on Website
 >
-> v5 - Multiple Graphs and Navigation System on Website
+> v5 - Added a Posts Feed and Updated Navigation System on Website
