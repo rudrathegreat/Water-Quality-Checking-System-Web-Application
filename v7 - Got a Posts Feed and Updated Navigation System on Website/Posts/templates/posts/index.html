@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <title>Water Quality Checking System Blog</title>
+    {% block content %}
+</head>
+<body>
+    <header class="container center-align">
+        <h1>Water Quality Checking System Blog</h1>
+    </header>
+    <h3 class="center-align red lighten-3">{{title}}</h3>
+    <h1></h1>
+    <ul>
+        {% for post in posts %}
+            <li class="collection-item"><a href="posts/details/{{post.id}}">{{post.title}}</a></li>
+        {% endfor %}
+    </ul>
+    <div>
+        <h1></h1>
+    </div>
+    <div>
+        <a class="btn" href="/admin">Admin Login</a>
+    </div>
+    <h4></h4>
+    <div>
+        <a class="btn" href="http://127.0.0.1:8000">Go Back</a>
+    </div>
+    <h4></h4>
+    <div>
+        <a class="btn" href="http://127.0.0.1:8000/data">All Data</a>
+    </div>
+
+    {% endblock %}
+</body>
+</html>
