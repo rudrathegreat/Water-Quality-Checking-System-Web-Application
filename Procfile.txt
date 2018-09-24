@@ -1,1 +1,1 @@
-web: gunicorn Water-Quality-Checking-System-Web-Application.wsgi --log-file -
+web: python manage.py run_gunicorn -b 0.0.0.0:$PORT
