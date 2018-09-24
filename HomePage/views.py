@@ -6,13 +6,13 @@ from django.http import HttpResponse
 # Create your views here.
 
 context = {
-    'stars': static('HomePage/stars.jpg'),
-    'river': static('HomePage/river.jpg'),
-    'rain': static('HomePage/drip-drop.jpg'),
+    'stars': static('stars.jpg'),
+    'river': static('river.jpg'),
+    'rain': static('drip-drop.jpg'),
     'cow': static('HomePage/cow.png'),
     'deakin': static('HomePage/deakin.png'),
-    'crosswalk': static('HomePage/crosswalk.jpg'),
-    'background': static('HomePage/background.jpg'),
+    'crosswalk': static('crosswalk.jpg'),
+    'background': static('background.jpg'),
     'mw': static('HomePage/mw.png'),
     'yprl': static('HomePage/yprl.png'),
 

@@ -3,3 +3,5 @@ WaterQualitySystem/settings.py
 .idea/
 WaterQualitySystem/__pycache__/
 Data/__pycache__/
+posts/__pycache__/
+HomePage/__pycache__/
