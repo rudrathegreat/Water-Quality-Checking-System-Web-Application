@@ -1,0 +1,15 @@
+cycler==0.10.0
+Django==2.1
+django-jinja==2.4.1
+image==1.5.25
+Jinja2==2.10
+kiwisolver==1.0.1
+MarkupSafe==1.0
+matplotlib==2.2.3
+numpy==1.15.1
+Pillow==5.2.0
+psycopg2==2.7.5
+pyparsing==2.2.0
+python-dateutil==2.7.3
+pytz==2018.5
+six==1.11.0
