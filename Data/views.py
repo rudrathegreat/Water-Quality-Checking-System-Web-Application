@@ -1,4 +1,7 @@
 from _pydecimal import Decimal
+
+import matplotlib
+matplotlib.use('Agg')
 import PIL
 # import numpy as np
 import pylab
