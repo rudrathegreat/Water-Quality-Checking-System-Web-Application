@@ -1,1 +1,1 @@
-web: gunicorn WaterQualitySystem.wsgi --log-file -
+web: gunicorn Water-Quality-Checking-System-Web-Application.wsgi --log-file -
