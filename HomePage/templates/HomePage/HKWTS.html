@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     {% block page %}
-    {% load staticfiles %}
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
-    <title>MPL Maker's Club</title>
+    <title>Title</title>
     <style>
 * {
 	margin:0;
@@ -146,8 +145,8 @@ nav ul li ul li:hover ul {
 }
 
 .img-container {
-    background-image:url({{ background }});
-    height:80%;
+    background-image:url({{ crosswalk }});
+    height:70%;
     background-position:center;
     background-repeat:no-repeat;
 	background-size:cover;
@@ -250,27 +249,12 @@ a {
 
 }
 
-.text-container h3 {
-
-    margin-top:-17px;
-    padding:20px 50px;
-    font-size:1.3em;
-    font-family: 'Source Sans Pro', sans serif;
-    text-transform:uppercase;
-    font-weight:bold;
-    text-align:center;
-    font-weight:bold;
-    color:#fff;
-
-}
-
 .text-container p {
     margin-top:-17px;
     padding:20px 50px;
-    font-size:1.1em;
-    font-family: 'Source Sans Pro', sans serif;
-    font-weight:bold;
-    text-transform:uppercase;
+    font-size:1.3em;
+    font-family: 'Questrial', sans serif;
+    font-weight:400;
     color:#fff;
 }
 
@@ -294,189 +278,8 @@ a {
     background-color:#fff;
     color:#000;
     transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
-.imgc {
-    background-image:url({{ river }});
-    height:60%;
-    background-position:center;
-    background-repeat:no-repeat;
-	background-size:cover;
-	position:relative;
-}
-
-.inner-container {
-    text-align:center;
-    position:absolute;
-    width:100%;
-    color:white;
-    height:auto;
-    margin-top:200px;
-    opacity:0;
-    top:5px;
-}
-
-.imgc h1 {
-    font-size:3em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    color:#fff;
-}
-
-.imgc h2 {
-
-    margin-top:-17px;
-    font-size:1.7em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    font-weight:400;
-    color:#fff;
 
 }
-
-.imgc .btn {
-    position:center;
-    display: inline-block;
-    width:200px;
-    font-weight:bold;
-    padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    margin-left:550px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}
-
-.btn:hover,.btn:active {
-    text-align:center;
-    background-color:#fff;
-    color:#000;
-    transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-.image-c {
-    background-image:url({{ crosswalk }});
-    height:70%;
-    background-position:center;
-    background-repeat:no-repeat;
-	background-size:cover;
-	position:relative;
-}
-
-.inner-container {
-
-    text-align:center;
-    position:absolute;
-    width:100%;
-    color:white;
-    height:auto;
-    margin-top:200px;
-    opacity:0;
-    top:5px;
-}
-
-.image-c h1 {
-    font-size:3em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    color:#fff;
-}
-
-.image-c h2 {
-
-    margin-top:-17px;
-    font-size:1.7em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    font-weight:400;
-    color:#fff;
-
-}
-
-.image-c .btn {
-    position:center;
-    display: inline-block;
-    width:200px;
-    font-weight:bold;
-    padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    margin-left:550px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}
-
-.btn:hover, .btn:active {
-    text-align:center;
-    background-color:#fff;
-    color:#000;
-    transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
-.image-container {
-    background-image:url({{ rain }});
-    height:70%;
-    background-position:center;
-    background-repeat:no-repeat;
-	background-size:cover;
-	position:relative;
-}
-
-.inner-container {
-
-    text-align:center;
-    position:absolute;
-    width:100%;
-    color:white;
-    height:auto;
-    margin-top:200px;
-    opacity:0;
-    top:5px;
-}
-
-.image-container h1 {
-    font-size:3em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    color:#fff;
-}
-
-.image-container h2 {
-
-    margin-top:-17px;
-    font-size:1.7em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    font-weight:400;
-    color:#fff;
-
-}
-
-.image-container .btn {
-    position:center;
-    display: inline-block;
-    width:200px;
-    font-weight:bold;
-    padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    margin-left:550px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}
-
-.btn:hover, .btn:active {
-    text-align:center;
-    background-color:#fff;
-    color:#000;
-    transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
 .img-c {
     background-image:url({{ stars }});
     height:70%;
@@ -499,11 +302,13 @@ a {
 }
 
 .img-c h1 {
+    position:relative;
     font-size:3em;
-    font-family: 'Source Sans Pro', sans serif;
+    font-family:'Source Sans Pro', sans serif;
+    font-weight:bold;
     text-transform:uppercase;
-    text-align:center;
     color:#fff;
+    text-align:center;
 }
 
 
@@ -513,13 +318,13 @@ a {
     width:200px;
     font-weight:bold;
     padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
+    color:#79b9cf;
+    border: 4px solid #000;
     text-align:center;
     outline:none;
     text-decoration:none;
     margin-left:550px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    transition:background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
 .btn:hover, .btn:active {
@@ -528,38 +333,6 @@ a {
     color:#000;
     transition:background-color 0.3s ease-in, color 0.3s ease-in;
 }
-
-.card {
-    padding:16px 24px;
-    position:relative;
-    margin:.5rem 0 1rem 0;
-    background-color:#fff;
-    -webkit-transition:-webkit-box-shadow .25s;
-    transition:-webkit-box-shadow .25s;
-    transition:box-shadow .25s;
-    transition:box-shadow .25s, -webkit-box-shadow .25s;
-    border-radius:2px
-}
-
-.card .card-content {
-    padding:16px 24px;
-    font-family:'Questrial', sans serif;
-    color:#f3f3f3
-    background-color:#d1d1d1;
-    padding:24px;
-    border-radius:0 0 2px 2px;
-}
-
-.card .card-action {
-    font-family:'Questrial', sans serif;
-    color:#b1b1b1;
-    background-color:#f3f3f3;
-    background-color:inherit;
-    border-top:1px solid rgba(160,160,160,0.2);
-    position:relative;
-    padding:16px 24px;
-}
-
 
 .footer {
     background-color:#02003b;
@@ -660,11 +433,11 @@ a {
         <br>
         <br>
         <br>
-        <h1>{{post.title}}</h1>
+        <h1>Helping Kids Walk to School</h1>
         <br>
-        <h2>The Details of This Posts</h2>
+        <h2>Encouraging Kids to Walk to School by Following a Robot</h2>
         <br>
-        <a class="btn" href="http://127.0.0.1:8000/posts/">BACK TO POSTS</a>
+        <a class="btn" href="http://127.0.0.1:8000/">BACK TO HOME</a>
         <br>
         <br>
         <br>
@@ -672,15 +445,70 @@ a {
     </div>
     <br>
     <br>
+
+    <div class="text-container">
+        <br>
+        <br>
+        <p>
+            Cars have taken over our society in many ways giving us a new way of
+            transporting ourselves to different destinations. Because of the
+            nasty habit that cars are polluting the air, it has come to the
+            community's concern that we need to start finding new eco-friendly
+            ways of getting from one location to another.
+        </p>
+        <br>
+        <p>
+            Walking, cycling and scooting has been a good alternative to these
+            machines, however, not many people are willing to do this. So we
+            have decided to work with schools along with the Whittlesea Council
+            to encourage students to walk their way to school by
+            initialising a robot that follows lines. These lines make their way
+            to school. To be brief, the students can follow the robot to school.
+        </p>
+        <br>
+        <p>
+            The robot will use several sensors to detect the environment around
+            it and detect any obstacles and will respond accordingly. The robot
+            will also have an infared sensor underneath so that it can detect if
+            it is on the white line or not and stay on the white lines. It will
+            also be going at a slow pace so that the 'slow' walkers can still
+            keep up.
+        </p>
+        <br>
+        <p>
+            The robot will also be able to read QR codes which will give the
+            robot certain instructions and do those instructions.
+        </p>
+        <br>
+        <p>
+            Another great feature of the robot is that it will have a recharging
+            station at school which is vandalism-proof. The recharging station
+            will use eco-friendly ways to charge the robot so that it doesn't
+            cause extra pollution on top of the already-accumulating amount
+            in pollution.
+        </p>
+        <br>
+        <p>
+            It will also have GPS tracking which will allow parents know where
+            their children currently are. This will be in an application which
+            also check a variety of other vital things.
+        </p>
+        <br>
+        <p>
+            If you do have any questions or enquiries, please comment in the Posts
+            Feeds Section, link below or just contact us.
+        </p>
+        <br>
+        <br>
+        <a href="http://127.0.0.1:8000/posts/" class="btn">POSTS FEEDS</a>
+        <a href="http://127.0.0.1:8000/contacts/" class="btn">CONTACTS</a>
+        <br>
+        <br>
+    </div>
     <br>
-    <div class="card">
-        <div class="card-content">
-            <p>{{post.body}}</p>
-        </div>
-        <div class="card-action">
-            {{post.created_at}}
-        </div>
-     </div>
+    <br>
+    <br>
+
     <div class="img-c">
         <br>
         <h1>Make a Difference Today</h1>

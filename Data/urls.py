@@ -1,4 +1,7 @@
 from django.conf.urls import url
+from django.conf.urls.static import static
+
+from WaterQualitySystem import settings
 from . import views
 
 urlpatterns = [
@@ -10,3 +13,5 @@ urlpatterns = [
     url(r"^lastYearpH/", views.LastYearpH, name='Last Year pH Data'),
     url(r"^last24HoursConductivity/", views.Last24HoursConductivity, name='Last 24 Hours Conductivity Data'),
 ]
+
+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

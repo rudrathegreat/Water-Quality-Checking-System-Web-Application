@@ -15,9 +15,9 @@ import io
 from datetime import *
 # from matplotlib.pyplot import figure, axes, plot, xlabel, ylabel, title, grid
 
-DataFilePathTemperature = "D:/Rudra/VirtualEnv/WaterQualitySystem 2 - LIVE/Data/files/Temperature.txt"
-DataFilePathConductivity = "D:/Rudra/VirtualEnv/WaterQualitySystem 2 - LIVE/Data/files/Conductivity.txt"
-DataFilePathpH = "D:/Rudra/VirtualEnv/WaterQualitySystem 2 - LIVE/Data/files/pH.txt"
+DataFilePathTemperature = "D:/Rudra/work/VirtualEnv/WaterQualitySystem/Data/files/Temperature.txt"
+DataFilePathConductivity = "D:/Rudra/work/VirtualEnv/WaterQualitySystem/Data/files/Conductivity.txt"
+DataFilePathpH = "D:/Rudra/VirtualEnv/work/WaterQualitySystem/Data/files/pH.txt"
 style.use("ggplot")
 
 
