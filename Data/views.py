@@ -1,3 +1,4 @@
+import os
 from _pydecimal import Decimal
 
 import matplotlib
@@ -18,9 +19,9 @@ import io
 from datetime import *
 # from matplotlib.pyplot import figure, axes, plot, xlabel, ylabel, title, grid
 
-DataFilePathTemperature = "D:/Rudra/work/VirtualEnv/WaterQualitySystem/Data/files/Temperature.txt"
-DataFilePathConductivity = "D:/Rudra/work/VirtualEnv/WaterQualitySystem/Data/files/Conductivity.txt"
-DataFilePathpH = "D:/Rudra/VirtualEnv/work/WaterQualitySystem/Data/files/pH.txt"
+DataFilePathTemperature = os.path.join(os.path.dirname(__file__), './files/Temperature.txt')
+DataFilePathConductivity = os.path.join(os.path.dirname(__file__), './files/Conductivity.txt')
+DataFilePathpH = os.path.join(os.path.dirname(__file__), './files/pH.txt')
 style.use("ggplot")
 
 
@@ -30,7 +31,7 @@ style.use("ggplot")
 def index(request):
     context = {
         'image_name': 'Temperature Data',
-        'image': 'D:/Rudra/VirtualEnv/WaterQualitySystem/images/image.jpeg'
+        'image': './images/image.jpeg'
     }
     return render(request, template_name='data/data.html', context=context)
 
