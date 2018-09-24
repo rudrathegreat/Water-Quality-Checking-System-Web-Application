@@ -135,7 +135,7 @@ nav ul li ul li:hover ul {
 }
 
 .img-container {
-    background-image:url('{{background}}');
+    background-image:url('background.jpg');
     height:80%;
     background-position:center;
     background-repeat:no-repeat;
@@ -285,7 +285,7 @@ a {
 }
 
 .imgc {
-    background-image:url('{{river}}');
+    background-image:url('river.jpg');
     height:60%;
     background-position:center;
     background-repeat:no-repeat;
@@ -344,7 +344,7 @@ a {
     transition:background-color 0.3s ease-in, color 0.3s ease-in;
 }
 .image-c {
-    background-image:url('{{crosswalk}}');
+    background-image:url('crosswalk.jpg');
     height:70%;
     background-position:center;
     background-repeat:no-repeat;
@@ -405,7 +405,7 @@ a {
 }
 
 .image-container {
-    background-image:url('{{rain}}');
+    background-image:url('drip-drop.jpg');
     height:70%;
     background-position:center;
     background-repeat:no-repeat;
@@ -466,7 +466,7 @@ a {
 }
 
 .img-c {
-    background-image:url('{{stars}}');
+    background-image:url('stars.jpg');
     height:70%;
     background-position:center;
     background-repeat:no-repeat;
