@@ -9,5 +9,7 @@ numpy==1.15.1
 Pillow==5.2.0
 psycopg2==2.7.5
 pyparsing==2.2.0
+python-dateutil==2.7.3
+matplotlib==2.2.3
 pytz==2018.5
 six==1.11.0
