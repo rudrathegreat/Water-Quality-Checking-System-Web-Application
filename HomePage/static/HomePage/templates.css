@@ -135,7 +135,7 @@ nav ul li ul li:hover ul {
 }
 
 .img-container {
-    background-image:url('D:\Rudra\work\VirtualEnv\WaterQualitySystem\HomePage\templates\HomePage\static\HomePage\background.jpg');
+    background-image:url("{{background}}");
     height:80%;
     background-position:center;
     background-repeat:no-repeat;
@@ -285,7 +285,7 @@ a {
 }
 
 .imgc {
-    background-image:url('D:\Rudra\work\VirtualEnv\WaterQualitySystem\HomePage\templates\HomePage\static\HomePage\river.jpg');
+    background-image:url('{{river}}');
     height:60%;
     background-position:center;
     background-repeat:no-repeat;
@@ -344,7 +344,7 @@ a {
     transition:background-color 0.3s ease-in, color 0.3s ease-in;
 }
 .image-c {
-    background-image:url('D:\Rudra\work\VirtualEnv\WaterQualitySystem\HomePage\templates\HomePage\static\HomePage\crosswalk.jpg');
+    background-image:url('{{crosswalk}}');
     height:70%;
     background-position:center;
     background-repeat:no-repeat;
@@ -405,7 +405,7 @@ a {
 }
 
 .image-container {
-    background-image:url('D:\Rudra\work\VirtualEnv\WaterQualitySystem\HomePage\templates\HomePage\static\HomePage\drip-drop.jpg');
+    background-image:url('{{rain}}');
     height:70%;
     background-position:center;
     background-repeat:no-repeat;
@@ -466,7 +466,7 @@ a {
 }
 
 .img-c {
-    background-image:url('D:\Rudra\work\VirtualEnv\WaterQualitySystem\HomePage\templates\HomePage\static\HomePage\stars.jpg');
+    background-image:url('{{stars}}');
     height:70%;
     background-position:center;
     background-repeat:no-repeat;
