@@ -1,3 +1,5 @@
 WaterQualitySystem/settings.py
 .idea/vcs.xml
 .idea/
+WaterQualitySystem/__pycache__/
+Data/__pycache__/
