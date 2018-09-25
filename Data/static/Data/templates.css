@@ -1,78 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% block page %}
-    {% load staticfiles %}
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
-    <title>MPL Maker's Club</title>
-    <style>
 * {
 	margin:0;
 	padding:0;
 }
 
-@keyframes slider {
-    0% {
-        left:0;
-    }
-    20% {
-        left:0;
-    }
-    25% {
-        left:-100%;
-    }
-    45% {
-        left:-100%;
-    }
-    50% {
-        left:-200%;
-    }
-    70% {
-        left:-200%;
-    }
-    75% {
-        left:-300%;
-    }
-    95% {
-        left:-400%;
-    }
-    100% {
-        left:-400%;
-    }
-}
-
 body {
 
 }
-
-#slider {
-    overflow:hidden;
-}
-
-#slider figure image {
-    width:70%;
-    float:left;
-}
-
-#slider figure {
-    position:relative;
-    width:300%;
-    margin:0;
-    left:0;
-    text-align:center;
-}
-
-#slider figure h1 {
-    font-size:3em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    color:#fff;
-}
-
-#slider figure
 
 .content {
     margin-top:50px;
@@ -80,17 +13,10 @@ body {
 
 nav {
     width:100%;
-    height:65px;
+    height:60px;
     background-color:#fff;
     position:fixed;
     z-index:9000;
-}
-
-nav img {
-    float:left;
-    margin-left:10px;
-    margin-top:15px;
-    padding-right:50px;
 }
 
 nav li {
@@ -124,12 +50,10 @@ nav ul li a {
     display:block;
     font-family: 'Rajdhani', sans serif;
     color:#222;
-    font-size:16px;
-    font-weight:bold;
+    font-size:14px;
     padding:10px 14px;
     text-decoration:none;
 }
-
 
 nav ul li ul {
     float:left;
@@ -141,15 +65,6 @@ nav ul li ul {
 }
 
 nav ul li:hover ul {
-    color:#c1c1c1;
-    display:block;
-    animation: navmenu 300ms;
-}
-
-nav ul li:hover .long-menu {
-    width:310px;
-    float:left;
-    padding:10px 8px;
     color:#c1c1c1;
     display:block;
     animation: navmenu 300ms;
@@ -173,7 +88,6 @@ nav ul li:hover:before {
 }
 
 nav a {
-    font-size:0.9em;
     color:#a1a1a1;
     text-transformation:uppercase;
 }
@@ -185,29 +99,17 @@ nav a:hover {
 @keyframes navmenu {
     0% {
         opacity:0;
-        top:72px;
+        top:68px;
     }
     100% {
         opacity:1;
-        top:62px;
+        top:58px;
     }
 }
 
 nav ul li ul li a {
     float:left;
     padding: 8px 30px;
-}
-
-nav ul li ul li .submenu {
-    float:left;
-    padding: 8px 30px;
-    padding-right:80px;
-}
-
-nav ul li ul li .submenu-2 {
-    float:left;
-    padding: 8px 30px;
-    padding-right:140px;
 }
 
 nav ul li ul li a:hover {
@@ -221,19 +123,19 @@ nav ul li ul li ul {
 }
 
 nav ul li ul li:hover ul {
+    animation:navmenu;
     opacity:1;
     visibility:visible;
     background:#fff;
     display:block;
     position:absolute;
-    width:160px;
-    left:185px;
+    width:140px;
+    left:180px;
     top:0px;
-    animation:navmenu 300ms;
 }
 
 .img-container {
-    background-image:url({{ background }});
+    background-image:url('background.jpg');
     height:80%;
     background-position:center;
     background-repeat:no-repeat;
@@ -342,21 +244,21 @@ a {
     margin-top:-17px;
     padding:20px 50px;
     font-size:1.3em;
-    font-family: 'Source Sans Pro', sans serif;
+    font-family: 'Questrial', sans serif;
     font-weight:bold;
     text-align:center;
-    font-weight:bold;
+    font-weight:400;
     color:#fff;
 
 }
 
 .text-container p {
-    text-align:center;
     margin-top:-17px;
     padding:20px 50px;
     font-size:1.1em;
     font-family: 'Source Sans Pro', sans serif;
     font-weight:bold;
+    text-transform:uppercase;
     color:#fff;
 }
 
@@ -383,7 +285,7 @@ a {
 }
 
 .imgc {
-    background-image:url({{ river }});
+    background-image:url('river.jpg');
     height:60%;
     background-position:center;
     background-repeat:no-repeat;
@@ -442,7 +344,7 @@ a {
     transition:background-color 0.3s ease-in, color 0.3s ease-in;
 }
 .image-c {
-    background-image:url({{ crosswalk }});
+    background-image:url('crosswalk.jpg');
     height:70%;
     background-position:center;
     background-repeat:no-repeat;
@@ -503,7 +405,7 @@ a {
 }
 
 .image-container {
-    background-image:url({{ rain }});
+    background-image:url('drip-drop.jpg');
     height:70%;
     background-position:center;
     background-repeat:no-repeat;
@@ -564,7 +466,7 @@ a {
 }
 
 .img-c {
-    background-image:url({{ stars }});
+    background-image:url('stars.jpg');
     height:70%;
     background-position:center;
     background-repeat:no-repeat;
@@ -654,98 +556,3 @@ a {
     display:inline-block;
     margin-top:10px;
 }
-
-    </style>
-</head>
-<body>
-
-    <div class="img-container">
-        <nav>
-            <ul>
-                <img src="{{ logo }}" width="50" height="50">
-                <li><a href="/">Home</a></li>
-                <li><a href="#">About</a>
-                <ul>
-                    <li><a href="/about-us/">Meet the Team</a></li>
-                </ul>
-                </li>
-                <li><a href="#">Projects</a>
-                    <ul class="long-menu">
-                        <li><a href="/rums/">Rainwater Usage Monitoring System</a></li>
-                        <li><a href="/hkwts/">Helping Kids Walk to School</a></li>
-                        <li><a href="/wqcs/">Water Quality Checking System</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Monitoring Data</a>
-                <ul>
-                    <li><a href="#" class="submenu">Temperature</a>
-                    <ul>
-                        <li><a href="/data/last24HoursTemperature/">Last 24 Hours</a></li>
-                        <li><a href="/data/lastYearTemperature/">Last Year</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="#" class="submenu">Conductivity</a>
-                    <ul>
-                        <li><a href="/data/last24HoursConductivity/">Last 24 Hours</a></li>
-                        <li><a href="/data/lastYearConductivity/">Last Year</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="#" class="submenu">pH</a>
-                    <ul>
-                        <li><a href="/data/last24HourspH/">Last 24 Hours</a></li>
-                        <li><a href="/data/lastYearpH/">Last Year</a></li>
-                    </ul>
-                    </li>
-                </ul>
-                </li>
-                <li><a href="#">Contact Us</a>
-                <ul>
-                    <li><a href="/posts/">Post Feeds</a></li>
-                    <li><a href="/contacts/">Contacts</a></li>
-                </ul>
-                </li>
-                <li><a href="/admin" target="_blank">Admin</a></li>
-            </ul>
-        </nav>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1>Posts Feeds Section</h1>
-        <br>
-        <h2>Any Questions? Mention Here.</h2>
-        <br>
-        <a class="btn" href="../">BACK TO HOME</a>
-        <br>
-        <br>
-        <br>
-        <br>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="img-c">
-        <br>
-        {% for post in posts %}
-            <a href="posts/details/{{post.id}}" class="btn">{{post.title}}</a>
-        {% endfor %}
-        <br>
-        <br>
-        <br>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="footer">
-        <p>Copyright C 2018 - All Rights Reserved. Only Collaborators in the Team excluded</p>
-        <img src="{{ cow }}" width="253.75" height="79.5">
-        <img src="{{ yprl }}" width="375" height="80">
-        <img src="{{ mw }}" width="290.5" height="80">
-        <img src="{{ deakin }}" width="80" height="80">
-    </div>
-    {% endblock %}
-</body>
-</html>

@@ -4,20 +4,16 @@ from _pydecimal import Decimal
 import matplotlib
 matplotlib.use('Agg')
 import PIL
-# import numpy as np
 import pylab
 from django.shortcuts import render
 from django.http import HttpResponse
-# import random
 import datetime
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-# from matplotlib.backends.backend_template import FigureCanvas
 from matplotlib.figure import Figure
-# from matplotlib.dates import DateFormatter
 from matplotlib import pyplot as plt, style
 import io
 from datetime import *
-# from matplotlib.pyplot import figure, axes, plot, xlabel, ylabel, title, grid
+from django.contrib.staticfiles.templatetags.staticfiles import static
 
 DataFilePathTemperature = os.path.join(os.path.dirname(__file__), './files/Temperature.txt')
 DataFilePathConductivity = os.path.join(os.path.dirname(__file__), './files/Conductivity.txt')
@@ -30,8 +26,18 @@ style.use("ggplot")
 
 def index(request):
     context = {
-        'image_name': 'Temperature Data',
-        'image': './images/image.jpeg'
+        'stars': static('HomePage/stars.jpg'),
+        'river': static('HomePage/river.jpg'),
+        'rain': static('HomePage/drip-drop.jpg'),
+        'cow': static('HomePage/cow.png'),
+        'deakin': static('HomePage/deakin.png'),
+        'crosswalk': static('HomePage/crosswalk.jpg'),
+        'background': static('HomePage/background.jpg'),
+        'mw': static('HomePage/mw.png'),
+        'yprl': static('HomePage/yprl.png'),
+        'rudra': static('HomePage/Rudra.png'),
+        'logo': static('HomePage/satms.jpg')
+
     }
     return render(request, template_name='data/data.html', context=context)
 

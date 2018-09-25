@@ -22,6 +22,8 @@ def index(request):
         'background': static('HomePage/background.jpg'),
         'mw': static('HomePage/mw.png'),
         'yprl': static('HomePage/yprl.png'),
+        'rudra': static('HomePage/Rudra.png'),
+        'logo': static('HomePage/satms.jpg')
 
     }
 
@@ -33,15 +35,17 @@ def details(request, id):
 
     context = {
         'post': post,
-        'stars': static('posts/stars.jpg'),
-        'river': static('posts/river.jpg'),
-        'rain': static('posts/drip-drop.jpg'),
-        'cow': static('posts/cow.png'),
-        'deakin': static('posts/deakin.png'),
-        'crosswalk': static('posts/crosswalk.jpg'),
-        'background': static('posts/background.jpg'),
-        'mw': static('posts/mw.png'),
-        'yprl': static('posts/yprl.png'),
+        'stars': static('HomePage/stars.jpg'),
+        'river': static('HomePage/river.jpg'),
+        'rain': static('HomePage/drip-drop.jpg'),
+        'cow': static('HomePage/cow.png'),
+        'deakin': static('HomePage/deakin.png'),
+        'crosswalk': static('HomePage/crosswalk.jpg'),
+        'background': static('HomePage/background.jpg'),
+        'mw': static('HomePage/mw.png'),
+        'yprl': static('HomePage/yprl.png'),
+        'rudra': static('HomePage/Rudra.png'),
+        'logo': static('HomePage/satms.jpg')
 
     }
 

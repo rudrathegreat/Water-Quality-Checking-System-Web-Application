@@ -15,7 +15,8 @@ context = {
     'background': static('HomePage/background.jpg'),
     'mw': static('HomePage/mw.png'),
     'yprl': static('HomePage/yprl.png'),
-    'rudra': static('HomePage/Rudra.png')
+    'rudra': static('HomePage/Rudra.png'),
+    'logo': static('HomePage/satms.jpg')
 
 }
 
