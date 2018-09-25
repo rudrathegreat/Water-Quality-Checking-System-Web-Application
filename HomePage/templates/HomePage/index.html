@@ -9,8 +9,13 @@
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
     <title>MPL Maker's Club</title>
     <style>
+
+    <!--html {-->
+        <!--/* Size of largest container or bigger */-->
+        <!--min-width: 1080px;-->
+    <!--}-->
 * {
-	margin:0;
+	margin:0 auto;
 	padding:0;
 }
 
@@ -79,12 +84,14 @@ body {
 }
 
 nav {
-    width:100%;
-    min-width: 500px;
+    width:1366px;
+    <!--overflow-x:auto;-->
+    <!--width:100%;-->
+    <!--min-width:100%;-->
     height:120px;
     background-color:#fff;
-    position:fixed;
-    z-index:9000;
+    position:absolute;
+    z-index:20000;
 }
 
 nav img {
@@ -112,7 +119,6 @@ nav p {
 
 nav ul {
     float:left;
-
 }
 
 nav ul li {
@@ -198,18 +204,22 @@ nav a:hover {
 nav ul li ul li a {
     float:left;
     padding: 8px 30px;
+    z-index:20000;
+
 }
 
 nav ul li ul li .submenu {
     float:left;
     padding: 8px 30px;
     padding-right:80px;
+    z-index:20000;
 }
 
 nav ul li ul li .submenu-2 {
     float:left;
     padding: 8px 30px;
     padding-right:140px;
+    z-index:20000;
 }
 
 nav ul li ul li a:hover {
@@ -236,10 +246,11 @@ nav ul li ul li:hover ul {
 
 .img-container {
     background-image:url({{ background }});
-    width:100%;
+    <!--width:100%;-->
     margin: 0 auto;
-    min-width:1366px;
-    max-width:1366px;
+    width:1366px;
+    <!--min-width:1366px;-->
+    <!--max-width:1366px;-->
     height:80%;
     background-position:center;
     background-repeat:no-repeat;
@@ -334,6 +345,7 @@ a {
 
 
 .text-container {
+    width:1366px;
     background-color:#97b2c4;
     height:60%;
     background-position:center;
@@ -410,6 +422,7 @@ a {
 }
 
 .imgc {
+    width:1366px;
     background-image:url({{ river }});
     height:60%;
     background-position:center;
@@ -469,6 +482,7 @@ a {
     transition:background-color 0.3s ease-in, color 0.3s ease-in;
 }
 .image-c {
+    width:1366px;
     background-image:url({{ crosswalk }});
     height:70%;
     background-position:center;
@@ -530,6 +544,7 @@ a {
 }
 
 .image-container {
+    width:1366px;
     background-image:url({{ rain }});
     height:70%;
     background-position:center;
@@ -591,6 +606,7 @@ a {
 }
 
 .img-c {
+    width:1366px;
     background-image:url({{ stars }});
     height:70%;
     background-position:center;
@@ -664,6 +680,7 @@ a {
 }
 
 .footer {
+    width:1366px;
     background-color:#73bdf0;
     height:60%;
     background-position:center;
@@ -759,180 +776,182 @@ a {
     <!--}-->
 <!--}-->
 
+
+
     </style>
 </head>
 <body>
 
-    <div class="img-container">
-        <nav>
-            <ul>
-                <img src="{{ logo }}" width="100" height="100">
-                <li><a href="/" >Home</a></li>
-                <li ><a href="#" >About</a>
+<div class="img-container">
+    <nav>
+        <ul>
+            <img src="{{ logo }}" width="100" height="100">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">About</a>
                 <ul>
                     <li><a href="/about-us/">Meet the Team</a></li>
                 </ul>
-                </li>
-                <li ><a href="#" >Projects</a>
-                    <ul class="long-menu">
-                        <li><a href="/rums/">Rainwater Usage Monitoring System</a></li>
-                        <li><a href="/hkwts/">Helping Kids Walk to School</a></li>
-                        <li><a href="/wqcs/">Water Quality Checking System</a></li>
-                    </ul>
-                </li>
-                <li ><a href="#">Monitoring Data</a>
+            </li>
+            <li><a href="#">Projects</a>
+                <ul class="long-menu">
+                    <li><a href="/rums/">Rainwater Usage Monitoring System</a></li>
+                    <li><a href="/hkwts/">Helping Kids Walk to School</a></li>
+                    <li><a href="/wqcs/">Water Quality Checking System</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Monitoring Data</a>
                 <ul>
                     <li><a href="#" class="submenu">Temperature</a>
-                    <ul>
-                        <li><a href="/data/last24HoursTemperature/" target="_blank">Last 24 Hours</a></li>
-                        <li><a href="/data/lastYearTemperature/" target="_blank">Last Year</a></li>
-                    </ul>
+                        <ul>
+                            <li><a href="/data/last24HoursTemperature/" target="_blank">Last 24 Hours</a></li>
+                            <li><a href="/data/lastYearTemperature/" target="_blank">Last Year</a></li>
+                        </ul>
                     </li>
                     <li><a href="#" class="submenu">Conductivity</a>
-                    <ul>
-                        <li><a href="/data/last24HoursConductivity/" target="_blank">Last 24 Hours</a></li>
-                        <li><a href="/data/lastYearConductivity/" target="_blank">Last Year</a></li>
-                    </ul>
+                        <ul>
+                            <li><a href="/data/last24HoursConductivity/" target="_blank">Last 24 Hours</a></li>
+                            <li><a href="/data/lastYearConductivity/" target="_blank">Last Year</a></li>
+                        </ul>
                     </li>
                     <li><a href="#" class="submenu-2">pH</a>
-                    <ul>
-                        <li><a href="/data/last24HourspH/" target="_blank">Last 24 Hours</a></li>
-                        <li><a href="/data/lastYearpH/" target="_blank">Last Year</a></li>
-                    </ul>
+                        <ul>
+                            <li><a href="/data/last24HourspH/" target="_blank">Last 24 Hours</a></li>
+                            <li><a href="/data/lastYearpH/" target="_blank">Last Year</a></li>
+                        </ul>
                     </li>
                 </ul>
-                </li>
-                <li ><a href="#" >Contact Us</a>
+            </li>
+            <li><a href="#">Contact Us</a>
                 <ul>
                     <li><a href="/posts/">Post Feeds</a></li>
                     <li><a href="/contacts/">Contacts</a></li>
                 </ul>
-                </li>
-                <li ><a href="/admin" target="_blank" >Admin</a></li>
-            </ul>
-        </nav>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1>Mill Park Library Maker's Club</h1>
-        <br>
-        <h2>Working with the Whittlesea Council to Solve Major Problems</h2>
-        <br>
-        <a class="btn" href="/about-us/">ABOUT US</a>
-        <br>
-        <br>
-        <br>
-        <br>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="text-container">
-        <br>
-        <br>
-        <h3>
-            The Mill Park Library Maker's Club, in association with the Whittlesea Council,
-            YPRL and Melbourne Water are conducting several sustainability projects to
-            help the community. The projects we are working on are -
-        </h3>
-        <br>
-        <ul>
-            <li>Monitoring the water quality in the Plenty River to save various wildlife species</li>
-            <li>Monitoring how efficiently we are using rainwater</li>
-            <li>Encouraging kids to walk to school by following a robot</li>
-
+            </li>
+            <li><a href="/admin" target="_blank">Admin</a></li>
         </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Mill Park Library Maker's Club</h1>
+    <br>
+    <h2>Working with the Whittlesea Council to Solve Major Problems</h2>
+    <br>
+    <a class="btn" href="/about-us/">ABOUT US</a>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<br>
+<br>
+<br>
+<div class="text-container">
+    <br>
+    <br>
+    <h3>
+        The Mill Park Library Maker's Club, in association with the Whittlesea Council,
+        YPRL and Melbourne Water are conducting several sustainability projects to
+        help the community. The projects we are working on are -
+    </h3>
+    <br>
+    <ul>
+        <li>Monitoring the water quality in the Plenty River to save various wildlife species</li>
+        <li>Monitoring how efficiently we are using rainwater</li>
+        <li>Encouraging kids to walk to school by following a robot</li>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </div>
-    <br>
-    <br>
-    <br>
+    </ul>
 
-    <div class="imgc">
-        <br>
-        <br>
-        <br>
-        <h1>Water Quality Monitoring System</h1>
-        <br>
-        <h2>Using Water Pollution Sensors to Help Save the Platypuses</h2>
-        <a href="/wqcs/" class="btn">LEARN MORE</a>
-        <br>
-        <br>
-        <br>
-    </div>
-    <br>
-    <br>
-    <div class="image-c">
-        <br>
-        <br>
-        <br>
-        <h1>Helping Kids Walk to School</h1>
-        <br>
-        <h2>Encouraging Kids to Walk to School by Following a Robot</h2>
-        <a href="/hkwts/" class="btn">LEARN MORE</a>
-        <br>
-        <br>
-        <br>
-    </div>
-    <br>
-    <br>
-    <div class="image-container">
-        <br>
-        <br>
-        <br>
-        <h1>Rainwater Usage Monitoring System</h1>
-        <br>
-        <h2>Monitoring How Efficiently We Use Rainwater</h2>
-        <a href="/rums/" class="btn">LEARN MORE</a>
-        <br>
-        <br>
-        <br>
-    </div>
     <br>
     <br>
     <br>
-    <div class="img-c">
-        <br>
-        <h1>Make a Difference Today</h1>
-        <h3>
-            If you do have any questions or enquiries, please comment
-            in the Posts Feeds Section, link below or just contact us.
-        </h3>
-        <a href="/contacts/" class="btn-left">CONTACTS</a>
-        <a href="/posts/" class="btn-right">POSTS FEEDS</a>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </div>
     <br>
     <br>
     <br>
-    <div class="footer">
-        <p>Copyright C 2018 - All Rights Reserved. Only Collaborators in the Team excluded</p>
-        <img src="{{ cow }}" width="253.75" height="79.5">
-        <img src="{{ yprl }}" width="375" height="80">
-        <img src="{{ mw }}" width="290.5" height="80">
-        <img src="{{ deakin }}" width="80" height="80">
-    </div>
-    {% endblock %}
+    <br>
+    <br>
+    <br>
+</div>
+<br>
+<br>
+<br>
+
+<div class="imgc">
+    <br>
+    <br>
+    <br>
+    <h1>Water Quality Monitoring System</h1>
+    <br>
+    <h2>Using Water Pollution Sensors to Help Save the Platypuses</h2>
+    <a href="/wqcs/" class="btn">LEARN MORE</a>
+    <br>
+    <br>
+    <br>
+</div>
+<br>
+<br>
+<div class="image-c">
+    <br>
+    <br>
+    <br>
+    <h1>Helping Kids Walk to School</h1>
+    <br>
+    <h2>Encouraging Kids to Walk to School by Following a Robot</h2>
+    <a href="/hkwts/" class="btn">LEARN MORE</a>
+    <br>
+    <br>
+    <br>
+</div>
+<br>
+<br>
+<div class="image-container">
+    <br>
+    <br>
+    <br>
+    <h1>Rainwater Usage Monitoring System</h1>
+    <br>
+    <h2>Monitoring How Efficiently We Use Rainwater</h2>
+    <a href="/rums/" class="btn">LEARN MORE</a>
+    <br>
+    <br>
+    <br>
+</div>
+<br>
+<br>
+<br>
+<div class="img-c">
+    <br>
+    <h1>Make a Difference Today</h1>
+    <h3>
+        If you do have any questions or enquiries, please comment
+        in the Posts Feeds Section, link below or just contact us.
+    </h3>
+    <a href="/contacts/" class="btn-left">CONTACTS</a>
+    <a href="/posts/" class="btn-right">POSTS FEEDS</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<br>
+<br>
+<br>
+<div class="footer">
+    <p>Copyright C 2018 - All Rights Reserved. Only Collaborators in the Team excluded</p>
+    <img src="{{ cow }}" width="253.75" height="79.5">
+    <img src="{{ yprl }}" width="375" height="80">
+    <img src="{{ mw }}" width="290.5" height="80">
+    <img src="{{ deakin }}" width="80" height="80">
+</div>
+{% endblock %}
 </body>
 </html>

@@ -10,7 +10,7 @@
     <title>MPL Maker's Club</title>
     <style>
 * {
-	margin:0;
+	margin:0 auto;
 	padding:0;
 }
 
@@ -79,11 +79,14 @@ body {
 }
 
 nav {
-    width:100%;
+    width:1366px;
+    <!--overflow-x:auto;-->
+    <!--width:100%;-->
+    <!--min-width:100%;-->
     height:120px;
     background-color:#fff;
-    position:fixed;
-    z-index:9000;
+    position:absolute;
+    z-index:20000;
 }
 
 nav img {
@@ -197,18 +200,22 @@ nav a:hover {
 nav ul li ul li a {
     float:left;
     padding: 8px 30px;
+    z-index:20000;
+
 }
 
 nav ul li ul li .submenu {
     float:left;
     padding: 8px 30px;
     padding-right:80px;
+    z-index:20000;
 }
 
 nav ul li ul li .submenu-2 {
     float:left;
     padding: 8px 30px;
     padding-right:140px;
+    z-index:20000;
 }
 
 nav ul li ul li a:hover {
@@ -234,12 +241,12 @@ nav ul li ul li:hover ul {
 }
 
 .img-container {
-    width:100%;
-    margin: 0 auto;
-    min-width:1366px;
-    max-width:1366px;
     background-image:url({{ background }});
-    height:80%;
+    <!--width:100%;-->
+    margin: 0 auto;
+    width:1366px;
+    <!--min-width:1366px;-->
+    <!--max-width:1366px;-->
     background-position:center;
     background-repeat:no-repeat;
 	background-size:cover;
@@ -331,7 +338,8 @@ a {
 
 
 .text-container {
-    background-color:#79b9cf;
+    width:1366px;
+    background-color:#97b2c4;
     height:60%;
     background-position:center;
     background-repeat:no-repeat;
@@ -396,6 +404,7 @@ a {
 }
 
 .imgc {
+    width:1366px;
     background-image:url({{ river }});
     height:60%;
     background-position:center;
@@ -455,6 +464,7 @@ a {
     transition:background-color 0.3s ease-in, color 0.3s ease-in;
 }
 .image-c {
+    width:1366px;
     background-image:url({{ crosswalk }});
     height:70%;
     background-position:center;
@@ -516,6 +526,7 @@ a {
 }
 
 .image-container {
+    width:1366px;
     background-image:url({{ rain }});
     height:70%;
     background-position:center;
@@ -577,6 +588,7 @@ a {
 }
 
 .img-c {
+    width:1366px;
     background-image:url({{ stars }});
     height:70%;
     background-position:center;
@@ -629,6 +641,7 @@ a {
 }
 
 .footer {
+    width:1366px;
     background-color:#73bdf0;
     height:60%;
     background-position:center;

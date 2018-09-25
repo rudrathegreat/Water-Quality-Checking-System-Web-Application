@@ -79,11 +79,14 @@ body {
 }
 
 nav {
-    width:100%;
+    width:1366px;
+    <!--overflow-x:auto;-->
+    <!--width:100%;-->
+    <!--min-width:100%;-->
     height:120px;
     background-color:#fff;
-    position:fixed;
-    z-index:9000;
+    position:absolute;
+    z-index:20000;
 }
 
 nav img {
@@ -197,18 +200,22 @@ nav a:hover {
 nav ul li ul li a {
     float:left;
     padding: 8px 30px;
+    z-index:20000;
+
 }
 
 nav ul li ul li .submenu {
     float:left;
     padding: 8px 30px;
     padding-right:80px;
+    z-index:20000;
 }
 
 nav ul li ul li .submenu-2 {
     float:left;
     padding: 8px 30px;
     padding-right:140px;
+    z-index:20000;
 }
 
 nav ul li ul li a:hover {
@@ -234,12 +241,12 @@ nav ul li ul li:hover ul {
 }
 
 .img-container {
-    width:100%;
     margin: 0 auto;
-    min-width:1366px;
-    max-width:1366px;
-    background-image:url({{ rain }});
+    width:1366px;
+    <!--min-width:1366px;-->
+    <!--max-width:1366px;-->
     height:80%;
+    background-image:url({{ rain }});
     background-position:center;
     background-repeat:no-repeat;
 	background-size:cover;
@@ -247,6 +254,8 @@ nav ul li ul li:hover ul {
 }
 
 .inner-container {
+    width:100%;
+    min-width:1000px;
     text-align:center;
     position:absolute;
     width:100%;
@@ -331,7 +340,8 @@ a {
 
 
 .text-container {
-    background-color:#79b9cf;
+    width:1366px;
+    background-color:#97b2c4;
     height:60%;
     background-position:center;
     background-repeat:no-repeat;
@@ -392,21 +402,6 @@ a {
     background-color:#fff;
     color:#000;
     transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
-.text-container .btn-right {
-    float:right;
-    display: inline-block;
-    width:200px;
-    font-weight:bold;
-    padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    margin-right:400px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
 .btn-right:hover,.btn:active {
@@ -476,6 +471,7 @@ a {
     transition:background-color 0.3s ease-in, color 0.3s ease-in;
 }
 .image-c {
+    width:1366px;
     background-image:url({{ crosswalk }});
     height:70%;
     background-position:center;
@@ -537,6 +533,7 @@ a {
 }
 
 .image-container {
+    width:1366px;
     background-image:url({{ rain }});
     height:70%;
     background-position:center;
@@ -598,6 +595,7 @@ a {
 }
 
 .img-c {
+    width:1366px;
     background-image:url({{ stars }});
     height:70%;
     background-position:center;
@@ -628,7 +626,7 @@ a {
 
 
 .img-c .btn {
-    position:center;
+    float:left;
     display: inline-block;
     width:200px;
     font-weight:bold;
@@ -638,7 +636,7 @@ a {
     text-align:center;
     outline:none;
     text-decoration:none;
-    margin-left:550px;
+    margin-left:400px;
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
@@ -649,7 +647,30 @@ a {
     transition:background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
+.img-c .btn-right {
+    float:right;
+    display: inline-block;
+    width:200px;
+    font-weight:bold;
+    padding:10px;
+    color:#fff;
+    border: 4px solid #fff;
+    text-align:center;
+    outline:none;
+    text-decoration:none;
+    margin-right:400px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+.btn-right:hover, .btn:active {
+    text-align:center;
+    background-color:#fff;
+    color:#000;
+    transition:background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
 .footer {
+    width:1366px;
     background-color:#73bdf0;
     height:60%;
     background-position:center;
@@ -815,14 +836,6 @@ a {
         </p>
         <br>
         <br>
-        <a href="/posts/" class="btn-right">POSTS FEEDS</a>
-        <a href="/contacts/" class="btn">CONTACTS</a>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
     </div>
     <br>
     <br>
@@ -830,6 +843,13 @@ a {
     <div class="img-c">
         <br>
         <h1>Make a Difference Today</h1>
+        <a href="/posts/" class="btn-right">POSTS FEEDS</a>
+        <a href="/contacts/" class="btn">CONTACTS</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
     </div>
     <br>
