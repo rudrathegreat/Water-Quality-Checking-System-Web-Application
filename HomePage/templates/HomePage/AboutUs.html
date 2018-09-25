@@ -228,90 +228,6 @@ a {
     transition:background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
-
-.text-container {
-    background-color:#b1b1b1;
-    height:60%;
-    background-position:center;
-    background-repeat:no-repeat;
-	background-size:cover;
-	position:relative;
-}
-
-.inner-container {
-    text-align:center;
-    position:absolute;
-    width:100%;
-    color:white;
-    height:auto;
-    margin-top:200px;
-    opacity:0;
-    top:5px;
-
-}
-
-.text-container p {
-    margin-top:-17px;
-    padding:20px 50px;
-    font-size:1.1em;
-    font-family: 'Source Sans Pro', sans serif;
-    font-weight:bold;
-    text-transform:uppercase;
-    color:#fff;
-}
-
-.img-c {
-    background-color:#79b9cf;
-    height:70%;
-    background-position:center;
-    background-repeat:no-repeat;
-	background-size:cover;
-	position:relative;
-}
-
-.inner-container {
-
-    text-align:center;
-    position:absolute;
-    width:100%;
-    color:white;
-    height:auto;
-    margin-top:200px;
-    opacity:0;
-    top:5px;
-}
-
-.img-c h3 {
-    font-size:1.7em;
-    font-family: 'Questrial', sans serif;
-    text-transform:uppercase;
-    text-align:center;
-    color:#fff;
-}
-
-
-.img-c .btn {
-    position:center;
-    display: inline-block;
-    width:200px;
-    font-weight:bold;
-    padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    margin-left:550px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}
-
-.btn:hover, .btn:active {
-    text-align:center;
-    background-color:#fff;
-    color:#000;
-    transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
 .footer {
     background-color:#02003b;
     height:60%;
@@ -371,6 +287,40 @@ nav ul li:hover .long-menu {
     color:#c1c1c1;
     display:block;
     animation: navmenu 300ms;
+}
+
+.profile {
+    width:770px;
+    background-color:#79b9cf;
+    font-family:'Questrial', sans serif;
+    position:absolute;
+    top:575px;
+    left:50%;
+    transform:translate(-50%, -50%);
+    padding:20px;
+    box-sizing:border-box;
+    border-radius:4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    display:flex;
+    transition:0.3s;
+}
+
+.profile .ImgBox {
+    width:357.25px;
+}
+
+.profile .profile-description {
+    padding-left:20px;
+}
+
+.profile .profile-description h2 {
+    margin:0;
+    padding-left:0;
+    color:#fff;
+}
+
+.profile:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
 }
 
     </style>
@@ -434,7 +384,6 @@ nav ul li:hover .long-menu {
         <h1>About Us</h1>
         <br>
         <h2>Meet the Team</h2>
-
         <a class="btn" href="../">BACK TO HOME</a>
         <br>
         <br>
@@ -443,57 +392,59 @@ nav ul li:hover .long-menu {
     </div>
     <br>
     <br>
-    <div class="text-container">
-        <p>
-            Meet the Team -
-        </p>
-        <p>Rudra</p>
-        <p>Dylan</p>
-        <p>Aarav</p>
-        <p>Carr</p>
-        <p>Josh</p>
-        <p>Noah</p>
-        <p>Miria</p>
-        <p>Kathy</p>
-        <p>Philomena</p>
-        <p>Christian</p>
-
-    </div>
     <br>
-    <br>
-    <div class="text-container">
-       <p>
-            THE MILL PARK LIBRARY MAKER'S CLUB, IN ASSOCIATION WITH THE WHITTLESEA COUNCIL,
-            YPRL AND MELBOURNE WATER ARE CONDUCTING SEVERAL SYSTEMS TO HELP THE COMMUNITY.
-        </p>
-        <p>
-            THE WHITTLESEA COUNCIL IS WORKING WITH THE MILL PARK LIBRARY MAKER'S CLUB
-            ORGANISATION TO SOLVE MANY PROBLEMS AROUND THE COMMUNITY. WE ALSO LIKE TO EDUCATE
-            AND ENCOURAGE PEOPLE SPECIFICALLY STUDENTS, ABOUT TECHNOLOGY AND HOW THE SYSTEM
-            WORKS. THE MAIN REASON IS SO THAT PEOPLE CAN MAKE A DIFFERENCE AND MAKE GOOD
-            CHOICES IN THE COMMUNITY.
-        </p>
-        <p>
-            THE ORGANISATION IS ALSO WORKING WITH DEAKIN UNIVERSITY ON THE WATER QUALITY
-            MONITORING PROJECT AND SOME SCHOOLS HAVE ALSO CONTRIBUTED IN BOTH THE RAINWATER
-            USAGE MONITORING PROJECT AND THE 'HELPING KIDS TO WALK TO SCHOOL INITIATIVE'.
-        </p>
-        <p>
-            The organisation is located in the Mill Park Library and the team regularly
-            meets on the Wednesday every week.
-        </p>
+    <div class="profile">
+        <div class="ImgBox">
+            <img src="{{ rudra }}" width="357.25" height="354.25">
+        </div>
+        <div class="profile-description">
+            <h2>Rudra S</h2>
+            <br>
+            <p>
+                Rudra is 12 years old and is very keen in programming, which is why
+                he created this website. He created this website so that people could
+                understand the impacts we are having on the environment and how we
+                can control that using technology.
+            </p>
+            <br>
+            <p>
+                Rudra's main hobbies are reading books, programming and watching videos
+                so that increase his knowledge in this field. He is very interested in
+                science, specifically astrophysics and quantum theories, mathematics,
+                he is currently doing VCE mathematics and of course computers,
+                programming, developing new projects.
+            </p>
+            <br>
+            <p>
+                Rudra works in a team for and with Edmond L - Dylan, Carr, Aarav, Josh,
+                Noah, Miria, Kathy, Philomena and Christian.
+            </p>
+        </div>
     </div>
     <br>
     <br>
     <br>
-    <div class="img-c">
-        <br>
-        <br>
-        <h3>Comments? Mention in the Posts Feeds Section</h3>
-        <a href="/posts/" class="btn">POSTS FEEDS</a>
-        <br>
-        <br>
-    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>
