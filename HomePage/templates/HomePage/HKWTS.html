@@ -374,6 +374,27 @@ a {
     margin-top:10px;
 }
 
+nav ul li ul li .submenu {
+    float:left;
+    padding: 8px 30px;
+    padding-right:80px;
+}
+
+nav ul li ul li .submenu-2 {
+    float:left;
+    padding: 8px 30px;
+    padding-right:140px;
+}
+
+nav ul li:hover .long-menu {
+    width:280px;
+    float:left;
+    padding:10px 8px;
+    color:#c1c1c1;
+    display:block;
+    animation: navmenu 300ms;
+}
+
     </style>
 </head>
 <body>
@@ -384,32 +405,31 @@ a {
                 <li><a href="/">Home</a></li>
                 <li><a href="#">About</a>
                 <ul>
-                    <li><a href="/wqcs/">Water Quality Checking System Project</a></li>
-                    <li><a href="/about-us/">Us</a></li>
+                    <li><a href="/about-us/">Meet the Team</a></li>
                 </ul>
                 </li>
-                <li><a href="#">Projects</a>
+                <li><a href="#" class="long-menu">Projects</a>
                     <ul>
                         <li><a href="/rums/">Rainwater Usage Monitoring Project</a></li>
                         <li><a href="/hkwts/">Helping Kids Walk to School</a></li>
                         <li><a href="/wqcs/">Water Quality Checking System Project</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Data</a>
+                <li><a href="#">Sustainability Systems' Data</a>
                 <ul>
-                    <li><a href="#">Temperature</a>
+                    <li><a href="#" class="submenu">Temperature</a>
                     <ul>
                         <li><a href="/data/last24HoursTemperature/">Last 24 Hours</a></li>
                         <li><a href="/data/lastYearTemperature/">Last Year</a></li>
                     </ul>
                     </li>
-                    <li><a href="#">Conductivity</a>
+                    <li><a href="#" class="submenu">Conductivity</a>
                     <ul>
                         <li><a href="/data/last24HoursConductivity/">Last 24 Hours</a></li>
                         <li><a href="/data/lastYearConductivity/">Last Year</a></li>
                     </ul>
                     </li>
-                    <li><a href="#">pH</a>
+                    <li><a href="#" class="submenu-2">pH</a>
                     <ul>
                         <li><a href="/data/last24HourspH/">Last 24 Hours</a></li>
                         <li><a href="/data/lastYearpH/">Last Year</a></li>
