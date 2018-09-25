@@ -80,6 +80,7 @@ body {
 
 nav {
     width:100%;
+    min-width: 500px;
     height:120px;
     background-color:#fff;
     position:fixed;
@@ -235,6 +236,10 @@ nav ul li ul li:hover ul {
 
 .img-container {
     background-image:url({{ background }});
+    width:100%;
+    margin: 0 auto;
+    min-width:1366px;
+    max-width:1366px;
     height:80%;
     background-position:center;
     background-repeat:no-repeat;
@@ -243,6 +248,8 @@ nav ul li ul li:hover ul {
 }
 
 .inner-container {
+    width:100%;
+    min-width:1000px;
     text-align:center;
     position:absolute;
     width:100%;
@@ -712,6 +719,45 @@ a {
     float:left;
     list-style:disc inside;
 }
+
+<!--@media only screen and (max-width:1920px){-->
+    <!--.inner-container {-->
+        <!--margin-top:100px;-->
+    <!--}-->
+    <!--.btn {-->
+        <!--margin-left:800px;-->
+    <!--}-->
+<!--}-->
+
+<!--@media only screen and (max-width:300px){-->
+    <!--.inner-container {-->
+        <!--margin-top:150px;-->
+    <!--}-->
+    <!--h1 {-->
+        <!--font-size:3em;-->
+    <!--}-->
+    <!--h2 {-->
+        <!--font-size:1.7em;-->
+    <!--}-->
+    <!--.btn {-->
+        <!--margin-left:100px;-->
+    <!--}-->
+<!--}-->
+
+<!--@media only screen and (max-width:1366px){-->
+    <!--.inner-container {-->
+        <!--margin-top:150px;-->
+    <!--}-->
+    <!--h1 {-->
+        <!--font-size:3em;-->
+    <!--}-->
+    <!--h2 {-->
+        <!--font-size:1.7em;-->
+    <!--}-->
+    <!--.btn {-->
+        <!--margin-left:550px;-->
+    <!--}-->
+<!--}-->
 
     </style>
 </head>
