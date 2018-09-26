@@ -10,73 +10,73 @@
     <title>Title</title>
     <style>
 * {
-	margin:0;
+	margin:0 auto;
 	padding:0;
 }
 
-@keyframes slider {
-    0% {
-        left:0;
-    }
-    20% {
-        left:0;
-    }
-    25% {
-        left:-100%;
-    }
-    45% {
-        left:-100%;
-    }
-    50% {
-        left:-200%;
-    }
-    70% {
-        left:-200%;
-    }
-    75% {
-        left:-300%;
-    }
-    95% {
-        left:-400%;
-    }
-    100% {
-        left:-400%;
-    }
-}
+<!--@keyframes slider {-->
+    <!--0% {-->
+        <!--left:0;-->
+    <!--}-->
+    <!--20% {-->
+        <!--left:0;-->
+    <!--}-->
+    <!--25% {-->
+        <!--left:-100%;-->
+    <!--}-->
+    <!--45% {-->
+        <!--left:-100%;-->
+    <!--}-->
+    <!--50% {-->
+        <!--left:-200%;-->
+    <!--}-->
+    <!--70% {-->
+        <!--left:-200%;-->
+    <!--}-->
+    <!--75% {-->
+        <!--left:-300%;-->
+    <!--}-->
+    <!--95% {-->
+        <!--left:-400%;-->
+    <!--}-->
+    <!--100% {-->
+        <!--left:-400%;-->
+    <!--}-->
+<!--}-->
 
-body {
+<!--body {-->
 
-}
+<!--}-->
 
-#slider {
-    overflow:hidden;
-}
+<!--#slider {-->
+    <!--overflow:hidden;-->
+<!--}-->
 
-#slider figure image {
-    width:70%;
-    float:left;
-}
+<!--#slider figure image {-->
+    <!--width:70%;-->
+    <!--float:left;-->
+<!--}-->
 
-#slider figure {
-    position:relative;
-    width:300%;
-    margin:0;
-    left:0;
-    text-align:center;
-}
+<!--#slider figure {-->
+    <!--position:relative;-->
+    <!--width:300%;-->
+    <!--margin:0;-->
+    <!--left:0;-->
+    <!--text-align:center;-->
+<!--}-->
 
-#slider figure h1 {
-    font-size:3em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    color:#fff;
-}
+<!--#slider figure h1 {-->
+    <!--font-size:3em;-->
+    <!--font-family: 'Gothic A1', sans serif;-->
+    <!--text-align:center;-->
+    <!--color:#fff;-->
+<!--}-->
 
-#slider figure
+<!--#slider figure-->
 
-.content {
-    margin-top:50px;
-}
+<!--.content {-->
+    <!--margin-top:50px;-->
+<!--}-->
 
 nav {
     width:1366px;
@@ -189,11 +189,11 @@ nav a:hover {
 @keyframes navmenu {
     0% {
         opacity:0;
-        top:104px;
+        top:105px;
     }
     100% {
         opacity:1;
-        top:94px;
+        top:95px;
     }
 }
 
@@ -245,8 +245,9 @@ nav ul li ul li:hover ul {
     width:1366px;
     <!--min-width:1366px;-->
     <!--max-width:1366px;-->
-    height:80%;
+    width:1366px;
     background-image:url({{ rain }});
+    height:70%;
     background-position:center;
     background-repeat:no-repeat;
 	background-size:cover;
@@ -341,7 +342,7 @@ a {
 
 .text-container {
     width:1366px;
-    background-color:#97b2c4;
+    background-color:#79b9cf;
     height:60%;
     background-position:center;
     background-repeat:no-repeat;
@@ -382,36 +383,8 @@ a {
     color:#fff;
 }
 
-.text-container .btn {
-    float:left;
-    display: inline-block;
-    width:200px;
-    font-weight:bold;
-    padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    margin-left:400px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}
-
-.btn:hover,.btn:active {
-    text-align:center;
-    background-color:#fff;
-    color:#000;
-    transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
-.btn-right:hover,.btn:active {
-    text-align:center;
-    background-color:#fff;
-    color:#000;
-    transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
 .imgc {
+    width:1366px;
     background-image:url({{ river }});
     height:60%;
     background-position:center;
@@ -739,9 +712,9 @@ a {
                 </li>
                 <li><a href="#" >Projects</a>
                     <ul class="long-menu">
+                        <li><a href="/wqcs/">Water Quality Checking System</a></li>
                         <li><a href="/rums/">Rainwater Usage Monitoring System</a></li>
                         <li><a href="/hkwts/">Helping Kids Walk to School</a></li>
-                        <li><a href="/wqcs/">Water Quality Checking System</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Monitoring Data</a>
