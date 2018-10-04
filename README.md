@@ -700,7 +700,7 @@ Then add your model to your database. Following the example above -
 
 ```Shell
 
-python mange.py makemigrations Person
+python manage.py makemigrations Person
 python manage.py migrate
 
 ```
