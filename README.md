@@ -758,7 +758,7 @@ Now we have to create a `index.html` in our project inside `templates/HomePage`.
 
 **Example**
 
-``HTML
+```HTML
 
     <div class="img-container">
         <nav>
@@ -829,7 +829,7 @@ Now we have to create a `index.html` in our project inside `templates/HomePage`.
         <br>
     </div>
 
-``
+```
 
 ##### Jinja Templating
 
@@ -837,7 +837,7 @@ Jinja2 is a modern and designer-friendly templating language for Python, modelle
 
 **Example**
 
-``HTML
+```HTML
 
 <title>{% block title %}{% endblock %}</title>
 <ul>
@@ -846,7 +846,7 @@ Jinja2 is a modern and designer-friendly templating language for Python, modelle
 {% endfor %}
 </ul>
 
-``
+```
 
 #### Deploying on Heroku
 
@@ -1237,7 +1237,7 @@ And so on...
 
 ## News
 
-Final-Version - Edited Some Stuff in the templates
+Final Version - Edited Some Stuff in the templates
 
 v6 - Finally got it working on Heroku
 
