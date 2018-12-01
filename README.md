@@ -532,6 +532,47 @@ def Last24HoursTemperature(request):
     
 ```
 
+## Technologies Used
+
+```
+
+Arduino
+BBC Microbit
+Raspberry Pi
+Temperature, pH and conductivity sensors
+LEDs
+Solar Panels, Lithium-ion Batteries
+Python, MicroPython, C, HTML, CSS
+
+```
+
+### Python Libraries Used
+
+```
+
+VirtualEnv
+Matplotlib, PyLab
+PIL.Image
+NumPy
+Io, datetime
+Tkinter, Matplotlib Backends
+_pydecimal.Decimal, etc.
+
+```
+
+### Platforms Used
+
+```
+
+Django
+Heroku
+VirtualEnv
+Jinja
+and of course GitHub!
+
+```
+
+
 ## Further References
 
 > https://matplotlib.org/gallery/user_interfaces/embedding_in_tk_canvas_sgskip.html
