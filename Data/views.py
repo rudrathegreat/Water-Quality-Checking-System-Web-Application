@@ -24,24 +24,6 @@ style.use("ggplot")
 # Create your views here.
 
 
-def index(request):
-    context = {
-        'stars': static('HomePage/stars.jpg'),
-        'river': static('HomePage/river.jpg'),
-        'rain': static('HomePage/drip-drop.jpg'),
-        'cow': static('HomePage/cow.png'),
-        'deakin': static('HomePage/deakin.png'),
-        'crosswalk': static('HomePage/crosswalk.jpg'),
-        'background': static('HomePage/background.jpg'),
-        'mw': static('HomePage/mw.png'),
-        'yprl': static('HomePage/yprl.png'),
-        'rudra': static('HomePage/Rudra.png'),
-        'logo': static('HomePage/satms.jpg')
-
-    }
-    return render(request, template_name='data/data.html', context=context)
-
-
 def Last24HoursTemperature(request):
     style.use("ggplot")
 

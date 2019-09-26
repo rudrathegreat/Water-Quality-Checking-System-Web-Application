@@ -7,894 +7,280 @@
     <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
-    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{{navCSS}}">
+    <link rel="stylesheet" type="text/css" href="{{mainCSS}}">
+    <link rel="stylesheet" type="text/css" href="{{fontawesome}}">
+    <link rel="stylesheet" type="text/css" href="{{socialIcons}}">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <title>Robot Walking School Bus</title>
     <style>
-* {
-	margin:0 auto;
-	padding:0;
-}
-
-@keyframes slider {
-    0% {
-        left:0;
-    }
-    20% {
-        left:0;
-    }
-    25% {
-        left:-100%;
-    }
-    45% {
-        left:-100%;
-    }
-    50% {
-        left:-200%;
-    }
-    70% {
-        left:-200%;
-    }
-    75% {
-        left:-300%;
-    }
-    95% {
-        left:-400%;
-    }
-    100% {
-        left:-400%;
-    }
-}
-
-body {
-
-}
-
-#slider {
-    overflow:hidden;
-}
-
-#slider figure image {
-    width:70%;
-    float:left;
-}
-
-#slider figure {
-    position:relative;
-    width:300%;
-    margin:0;
-    left:0;
-    text-align:center;
-}
-
-#slider figure h1 {
-    font-size:3em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    color:#fff;
-}
-
-#slider figure
-
-.content {
-    margin-top:50px;
-}
-
-nav {
-    width:1366px;
-    <!--overflow-x:auto;-->
-    <!--width:100%;-->
-    <!--min-width:100%;-->
-    height:120px;
-    background-color:#fff;
-    position:absolute;
-    z-index:20000;
-}
-
-nav img {
-    float:left;
-    margin-left:10px;
-    margin-top:15px;
-    padding-right:50px;
-}
-
-nav li {
-    display:inline-block;
-    position:relative;
-}
-
-nav p {
-    margin-top:10px;
-    font-family: 'Rajdhani', sans serif;
-    color:#222;
-    font-size:24px;
-    line-height:55px;
-    float:left;
-    padding:0px 20px;
-}
-
-
-nav ul {
-    float:left;
-}
-
-nav ul li {
-    float:left;
-    list-style:none;
-    position:relative;
-}
-
-nav ul li a {
-    margin-top:50px;
-    display:block;
-    font-family: 'Rajdhani', sans serif;
-    color:#222;
-    font-size:1.2em;
-    font-weight:bold;
-    padding:10px 14px;
-    text-decoration:none;
-}
-
-
-nav ul li ul {
-    float:left;
-    display:none;
-    position:absolute;
-    background-color:#fff;
-    padding:8px;
-    width:180px;
-}
-
-nav ul li:hover ul {
-    color:#c1c1c1;
-    display:block;
-    animation: navmenu 300ms;
-}
-
-nav ul li:hover .long-menu {
-    width:350px;
-    float:left;
-    padding:10px 8px;
-    color:#c1c1c1;
-    display:block;
-    animation: navmenu 300ms;
-}
-
-nav ul li:before {
-    content:'';
-    display:block;
-    height:3px;
-    width:0%;
-    background-color:#c1c1c1;
-    position:absolute;
-    transition:all ease-in-out 300ms;
-    top:0px
-}
-
-nav ul li:hover:before {
-    width:100%;
-    top:0px;
-    color:#c1c1c1;
-}
-
-nav a {
-    font-size:0.9em;
-    color:#a1a1a1;
-    text-transformation:uppercase;
-}
-
-nav a:hover {
-    color:#79b9cf;
-}
-
-@keyframes navmenu {
-    0% {
-        opacity:0;
-        top:105px;
-    }
-    100% {
-        opacity:1;
-        top:95px;
-    }
-}
-
-nav ul li ul li a {
-    float:left;
-    padding: 8px 30px;
-    z-index:20000;
-
-}
-
-nav ul li ul li .submenu {
-    float:left;
-    padding: 8px 30px;
-    padding-right:80px;
-    z-index:20000;
-}
-
-nav ul li ul li .submenu-2 {
-    float:left;
-    padding: 8px 30px;
-    padding-right:140px;
-    z-index:20000;
-}
-
-nav ul li ul li a:hover {
-    background-color: #f3f3f3;
-
-}
-
-nav ul li ul li ul {
-    display:none;
-    visibility:hidden;
-}
-
-nav ul li ul li:hover ul {
-    opacity:1;
-    visibility:visible;
-    background:#fff;
-    display:block;
-    position:absolute;
-    width:190px;
-    left:185px;
-    top:0px;
-    animation:navmenu 300ms;
-}
-
-.img-container {
-    margin: 0 auto;
-    width:1366px;
-    <!--min-width:1366px;-->
-    <!--max-width:1366px;-->
-    width:1366px;
-    background-image:url({{ crosswalk }});
-    height:70%;
-    background-position:center;
-    background-repeat:no-repeat;
-	background-size:cover;
-	position:relative;
-}
-
-.inner-container {
-    width:100%;
-    min-width:1000px;
-    text-align:center;
-    position:absolute;
-    width:100%;
-    color:white;
-    height:auto;
-    margin-top:200px;
-    opacity:0;
-    top:5px;
-}
-
-.img-container h1 {
-    font-size:3em;
-    font-family: 'Questrial', sans serif;
-    text-align:center;
-    color:#fff;
-    animation:title 1000ms;
-
-}
-
-@keyframes title {
-    0% {
-        display:none;
-        visibility:hidden;
-        opacity:0;
-        top:100px;
-    }
-    100% {
-        opacity:1;
-        top:0px;
-        position:relative;
-    }
-}
-
-.img-container h2 {
-    margin-top:-17px;
-    font-size:1.7em;
-    font-family: 'Questrial', sans serif;
-    text-align:center;
-    font-weight:400;
-    color:#fff;
-    animation:title 1000ms;
-}
-
-.img-container h3 {
-    font-size:1.3em;
-    font-family: 'Questrial', sans serif;
-    text-align:center;
-    font-weight:400;
-    color:#fff;
-    animation:title 1000ms;
-}
-
-a {
-    text-align:center;
-    margin-top:20px;
-    font-size:1.3em;
-    font-family:'Source Sans Pro', sans serif;
-}
-
-.img-container .btn {
-    animation:title 1000ms;
-    position:center;
-    display: inline-block;
-    width:200px;
-    font-weight:bold;
-    padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    margin-left:550px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}
-
-.btn:hover,.btn:active {
-    text-align:center;
-    background-color:#fff;
-    color:#000;
-    transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
-
-.text-container {
-    width:1366px;
-    background-color:#79b9cf;
-    height:60%;
-    background-position:center;
-    background-repeat:no-repeat;
-	background-size:cover;
-	position:relative;
-}
-
-.inner-container {
-    text-align:center;
-    position:absolute;
-    width:100%;
-    color:white;
-    height:auto;
-    margin-top:200px;
-    opacity:0;
-    top:5px;
-
-}
-
-.text-container h3 {
-
-    margin-top:-17px;
-    padding:20px 50px;
-    font-size:19px;
-    font-family: 'Questrial', sans serif;
-    text-align:center;
-    font-weight:400;
-    color:#fff;
-
-}
-
-.text-container p {
-    margin-top:-17px;
-    padding:20px 50px;
-    font-size:1.3em;
-    font-family: 'Questrial', sans serif;
-    font-weight:400;
-    color:#fff;
-}
-
-.text-container .btn {
-    float:left;
-    display: inline-block;
-    width:200px;
-    font-weight:bold;
-    padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    margin-left:400px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}
-
-.btn:hover,.btn:active {
-    text-align:center;
-    background-color:#fff;
-    color:#000;
-    transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
-.text-container .btn-right {
-    float:right;
-    display: inline-block;
-    width:200px;
-    font-weight:bold;
-    padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    margin-right:400px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}
-
-.btn-right:hover,.btn:active {
-    text-align:center;
-    background-color:#fff;
-    color:#000;
-    transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
-.imgc {
-    width:1366px;
-    background-image:url({{ river }});
-    height:60%;
-    background-position:center;
-    background-repeat:no-repeat;
-	background-size:cover;
-	position:relative;
-}
-
-.inner-container {
-    text-align:center;
-    position:absolute;
-    width:100%;
-    color:white;
-    height:auto;
-    margin-top:200px;
-    opacity:0;
-    top:5px;
-}
-
-.imgc h1 {
-    font-size:3em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    color:#fff;
-}
-
-.imgc h2 {
-
-    margin-top:-17px;
-    font-size:1.7em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    font-weight:400;
-    color:#fff;
-
-}
-
-.imgc .btn {
-    position:center;
-    display: inline-block;
-    width:200px;
-    font-weight:bold;
-    padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    margin-left:550px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}
-
-.btn:hover,.btn:active {
-    text-align:center;
-    background-color:#fff;
-    color:#000;
-    transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-.image-c {
-    width:1366px;
-    background-image:url({{ crosswalk }});
-    height:70%;
-    background-position:center;
-    background-repeat:no-repeat;
-	background-size:cover;
-	position:relative;
-}
-
-.inner-container {
-
-    text-align:center;
-    position:absolute;
-    width:100%;
-    color:white;
-    height:auto;
-    margin-top:200px;
-    opacity:0;
-    top:5px;
-}
-
-.image-c h1 {
-    font-size:3em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    color:#fff;
-}
-
-.image-c h2 {
-
-    margin-top:-17px;
-    font-size:1.7em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    font-weight:400;
-    color:#fff;
-
-}
-
-.image-c .btn {
-    position:center;
-    display: inline-block;
-    width:200px;
-    font-weight:bold;
-    padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    margin-left:550px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}
-
-.btn:hover, .btn:active {
-    text-align:center;
-    background-color:#fff;
-    color:#000;
-    transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
-.image-container {
-    width:1366px;
-    background-image:url({{ rain }});
-    height:70%;
-    background-position:center;
-    background-repeat:no-repeat;
-	background-size:cover;
-	position:relative;
-}
-
-.inner-container {
-
-    text-align:center;
-    position:absolute;
-    width:100%;
-    color:white;
-    height:auto;
-    margin-top:200px;
-    opacity:0;
-    top:5px;
-}
-
-.image-container h1 {
-    font-size:3em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    color:#fff;
-}
-
-.image-container h2 {
-
-    margin-top:-17px;
-    font-size:1.7em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    font-weight:400;
-    color:#fff;
-
-}
-
-.image-container .btn {
-    position:center;
-    display: inline-block;
-    width:200px;
-    font-weight:bold;
-    padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    margin-left:550px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}
-
-.btn:hover, .btn:active {
-    text-align:center;
-    background-color:#fff;
-    color:#000;
-    transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
-.img-c {
-    width:1366px;
-    background-image:url({{ stars }});
-    height:70%;
-    background-position:center;
-    background-repeat:no-repeat;
-	background-size:cover;
-	position:relative;
-}
-
-.inner-container {
-
-    text-align:center;
-    position:absolute;
-    width:100%;
-    color:white;
-    height:auto;
-    margin-top:200px;
-    opacity:0;
-    top:5px;
-}
-
-.img-c h1 {
-    font-size:3em;
-    font-family: 'Source Sans Pro', sans serif;
-    text-transform:uppercase;
-    text-align:center;
-    color:#fff;
-}
-
-
-.img-c .btn {
-    float:left;
-    display: inline-block;
-    width:200px;
-    font-weight:bold;
-    padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    margin-left:400px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}
-
-.btn:hover, .btn:active {
-    text-align:center;
-    background-color:#fff;
-    color:#000;
-    transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
-.img-c .btn-right {
-    float:right;
-    display: inline-block;
-    width:200px;
-    font-weight:bold;
-    padding:10px;
-    color:#fff;
-    border: 4px solid #fff;
-    text-align:center;
-    outline:none;
-    text-decoration:none;
-    margin-right:400px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out;
-}
-
-.btn-right:hover, .btn:active {
-    text-align:center;
-    background-color:#fff;
-    color:#000;
-    transition:background-color 0.3s ease-in, color 0.3s ease-in;
-}
-
-.footer {
-    width:1366px;
-    background-color:#73bdf0;
-    height:60%;
-    background-position:center;
-    background-repeat:no-repeat;
-	background-size:cover;
-	position:relative;
-}
-
-.inner-container {
-    text-align:center;
-    position:absolute;
-    width:100%;
-    color:white;
-    height:auto;
-    margin-top:200px;
-    opacity:0;
-    top:5px;
-
-}
-
-.footer p {
-    text-align:center;
-    margin-top:-17px;
-    padding:20px 50px;
-    font-size:0.75em;
-    font-family: 'Source Sans Pro', sans serif;
-    font-weight:bold;
-    text-transform:uppercase;
-    color:#fff;
-}
-
-.footer img {
-    padding-bottom:20px;
-    padding-left:30px;
-    padding-right:30px;
-    display:inline-block;
-    margin-top:10px;
-}
-
-.img-c h3 {
-
-    margin-top:-17px;
-    padding:20px 50px;
-    font-size:19px;
-    font-family: 'Questrial', sans serif;
-    text-align:center;
-    font-weight:400;
-    color:#fff;
-
-}
-
 
     </style>
 </head>
 <body>
-
-    <div class="img-container">
-        <nav>
-            <ul>
-                <img src="{{ logo }}" width="100" height="100">
-                <li><a href="../">Home</a></li>
-                <li><a href="#">About</a>
+    <div class="navbar">
+            <nav>
                 <ul>
-                    <li><a href="/about-us/">Meet the Team</a></li>
-                </ul>
-                </li>
-                <li><a href="#" >Projects</a>
-                    <ul class="long-menu">
-                        <li><a href="/wqcs/">Water Quality Checking System</a></li>
-                        <li><a href="/rums/">Rainwater Usage Monitoring System</a></li>
-                        <li><a href="/hkwts/">Helping Kids Walk to School</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Monitoring Data</a>
-                <ul>
-                    <li><a href="#" class="submenu">Temperature</a>
-                    <ul>
-                        <li><a href="/data/last24HoursTemperature/">Last 24 Hours</a></li>
-                        <li><a href="/data/lastYearTemperature/">Last Year</a></li>
-                    </ul>
+                    <img src="{{logo}}">
+                    <li class="navoption"><a href="../" class="navelement">Home</a></li>
+                    <li class="navoption"><a href="/about-us/" class="navelement">About</a>
                     </li>
-                    <li><a href="#" class="submenu">Conductivity</a>
-                    <ul>
-                        <li><a href="/data/last24HoursConductivity/">Last 24 Hours</a></li>
-                        <li><a href="/data/lastYearConductivity/">Last Year</a></li>
-                    </ul>
+                    <li class="navoption"><a href="javascript:void(1);" class="navelement">Projects</a>
+                        <ul class="long-menu">
+                            <li><a href="/wqcs/">Water Quality Checking System</a></li>
+                            <li><a href="/rums/">Rainwater Usage Monitoring System</a></li>
+                            <li><a href="/hkwts/">Robot Walking School Bus</a></li>
+                            <li><a href="/tkp/">The Kangaroo Project</a></li>
+                        </ul>
                     </li>
-                    <li><a href="#" class="submenu-2">pH</a>
-                    <ul>
-                        <li><a href="/data/last24HourspH/">Last 24 Hours</a></li>
-                        <li><a href="/data/lastYearpH/">Last Year</a></li>
-                    </ul>
+                     <li class="navoption"><a href="/md/" class="navelement">Monitoring Data</a>
+                        <ul>
+                            <li><a href="javascript:void(1);" class="submenu">Temperature</a>
+                                <ul>
+                                    <li><a href="/data/last24HoursTemperature/" target="_blank">Last 24 Hours</a></li>
+                                    <li><a href="/data/lastYearTemperature/" target="_blank">Last Year</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(1);" class="submenu">Conductivity</a>
+                                <ul>
+                                    <li><a href="/data/last24HoursConductivity/" target="_blank">Last 24 Hours</a></li>
+                                    <li><a href="/data/lastYearConductivity/" target="_blank">Last Year</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:void(1);" class="submenu-2">pH</a>
+                                <ul>
+                                    <li><a href="/data/last24HourspH/" target="_blank">Last 24 Hours</a></li>
+                                    <li><a href="/data/lastYearpH/" target="_blank">Last Year</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
+                    <li class="navoption"><a href="javascript:void(1);" class="navelement">Contact Us</a>
+                        <ul>
+                            <li><a href="/posts/">Post Feeds</a></li>
+                            <li><a href="/contacts/">Contacts</a></li>
+                        </ul>
+                    </li>
+                    <li class="navoption"><a href="/admin" target="_blank" class="navelement">Admin</a></li>
                 </ul>
-                </li>
-                <li><a href="#">Contact Us</a>
-                <ul>
-                    <li><a href="/posts/">Post Feeds</a></li>
-                    <li><a href="/contacts/">Contacts</a></li>
-                </ul>
-                </li>
-                <li><a href="/admin" target="_blank">Admin</a></li>
-            </ul>
-        </nav>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1>Helping Kids Walk to School</h1>
+            </nav>
+    </div>
+    <div class="img-container" style="background-image:url({{ crosswalk }});">
+        <h1>Robot Walking School Bus</h1>
         <br>
         <h2>Encouraging Kids to Walk to School by Following a Robot</h2>
-        <br>
-        <a class="btn" href="../">BACK TO HOME</a>
-        <br>
-        <br>
-        <br>
-        <br>
+        <a class="learn-more" onclick="document.getElementById('description').scrollIntoView(true);"><i class="fal fa-chevron-down"></i></a>
+    </div>
+    <div class="text-container" id="description">
+        <table id="descriptionTable">
+            <tr>
+                <td class="img" style=""><img src="{{litter}}" style="margin-top:80%;"></td>
+                <td>
+                    <p>
+                        Children today have less freedom to move around outdoors in comparison to previous
+                        generations. Anecdotally, this behaviour change is associated with the perceived risks associated with
+                        hazards such as street crime and high speed vehicular traffic. As a result of a sedentary lifestyle,
+                        children are becoming less healthy – both physically and mentally. In the near future, the development
+                        of self-driving vehicles may help to alleviate traffic congestion, but it is uncertain if these vehicles will
+                        encourage more students to walk and ride to school.
+                    </p>
+                    <br>
+                    <p>
+                        Parents today are very concerned about letting
+                        children walk to school. As a consequence,
+                        less than 20% of children walk or ride to
+                        school, whereas in the 1970’s up to 80% of
+                        children walked to school. This is giving rise to
+                        so called lifestyle diseases such as obesity
+                        and diabetes in children that were once
+                        relatively rare. Today, more than 25% of
+                        children are classified as obese. While junk
+                        food certainly plays a role, the inclusion of
+                        daily exercise is an important contributor to
+                        ameliorating this condition. One of the main
+                        reasons why children are not getting enough
+                        daily activity is because they are being
+                        chauffeured to and from school.
+                    </p>
+                    <br>
+                    <p>
+                        One alternative to the daily commute by car is
+                        for children to join a Walking School Bus.
+                        A Walking School Bus is managed by a
+                        responsible adult who walks with a group of
+                        children to school. The Bus travels along a
+                        predefined route and picks up children along
+                        the way at meeting points.
+                    </p>
+                    <br>
+                    <p>
+                        We  have developed a Robot Walking School Bus to
+                        guide students safely to and from school. The Robot is designed to follow a painted line on the
+                        footpath. The Robot can also help students collect street litter and transport organic waste from home
+                        to school for composting.
+                    </p>
+                    <br>
+                    <p>
+                        Since the Robot was travelling to school the
+                        students added a carry-compartment for
+                        organic waste, such as kitchen scraps. The
+                        aim is to take vegetable waste to school every
+                        day for composting. Once organic waste is
+                        composted it can be added to a fruit tree
+                        orchard at the school. Produce from the
+                        orchard can also be re-distributed back to the
+                        student community using the Robot.
+                        Composting at school has many advantages
+                        [ref]. Schools can incorporate composting into
+                        sustainability teaching modules and
+                        composting reduces greenhouse gas
+                        emissions derived from the anaerobic
+                        decomposition of organic matter in landfills.
+                    </p>
+                    <br>
+                    <p>
+                        Students noticed along their route that there
+                        were often significant amounts of street litter.
+                        They added two additional compartments to
+                        the Robot, one for litter and one for recycling.
+                        They also added hand operated pickers to the
+                        robot (which look like robot hands) so that they
+                        could safely pick up litter along the way to
+                        school.
+                    </p>
+                    <br>
+                    <p>
+                        The chassis of the robot is the Wild Thumper
+                        6WD robot (Dagu) which is capable of carrying
+                        a 5kg weight at 7km/hr (Figure 1). The walking
+                        speed for children typically ranges from 3 to
+                        5km/hr depending on age and fitness. The
+                        chassis motors were controlled by a TReX
+                        Dual Motor speed controller (Pololu). The microcontroller (electronic brain) used to
+                        control the robot was a Particle electron 3G
+                        microcontroller (Particle). The Robot uses a digital camera to follow a
+                        painted yellow line on the footpath. Line
+                        sensing image analysis was provided by the
+                        OpenMV version M7 digital camera.
+                    </p>
+                    <br>
+                    <p>
+                        While the Robot is designed to operate in
+                        autonomous line following mode, it can also be
+                        manually steered by students to get around
+                        obstacles. BBC micro:bits (BBC) using
+                        Bluetooth wireless were used to communicate
+                        with the Robot. The BBC micro:bit uses an
+                        accelerometer to register left and right turns to
+                        steer the robot. Manual and autonomous
+                        modes were selected using buttons on the
+                        BBC micro:bit.
+                    </p>
+                    <br>
+                    <p>
+                        To make the robot more endearing, sounds
+                        were added to provide cues to navigation,
+                        other sensory interactions, and general robot
+                        sounds. The effect is similar to the audio cues
+                        associated with George Lucas’ R2D2. An
+                        Arduino microcontroller with an MP3 player
+                        shield was used to play sounds.
+                    </p>
+                    <br>
+                    <p>
+                        A Robot Walking School Bus may encourage
+                    more students to walk to school by making this
+                    form or transport more attractive and safe for
+                    students. The Robot also incorporates design
+                    features that help students collect street litter
+                    and compost organic waste.
+                    </p>
+                    <br>
+                    <p>
+                        If you do have any questions or enquiries, please comment in the Posts
+                        Feeds Section, link below or just contact us.
+                    </p>
+                </td>
+                <td class="img" style=""><img src="{{robot}}" style="margin-bottom:170%;"></td>
+            </tr>
+        </table>
+    </div>
+<div class="footer" style="overflow-x:hidden;">
+    <div id="footerTable" style="padding-top:2%;">
+        <table style="width:80%; margin-left:16%;">
+            <tr>
+                <td class="img">
+                    <img src="{{wts}}" style="width:90%;">
+                </td>
+                <td class="img" style="width:12%;">
+                    <img src="{{ mu }}" style="width:50%;">
+                </td>
+                <td class="img" style="width:17%;">
+                    <img src="{{ mw }}" style="width:70%; margin-left:-10%;">
+                </td>
+                <td class="img" style="width:7%;">
+                    <img src="{{ deakin }}" style="width:90%; margin-left:-70%;">
+                </td>
+                <td class="img" style="width:10%;">
+                    <img src="{{ RMIT }}" style="width:90%; margin-left:-35%;">
+                </td>
+                <td class="img">
+                    <img src="{{ yf }}" style="margin-left:-5%; width:40%;">
+                </td>
+                <td class="img" style="width:15%;">
+                    <img src="{{ lsc }}" style="width:70%; margin-left:-80%;">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p style="padding-top:1%;">Copyright &copy; 2018-2019 Mill Park Library Makers Club Team. All Rights Reserved</p>
+    <div>
+        <table style="width:40%; margin-left:29.75%;">
+            <tr>
+                <td class="img" style="width:30%;">
+                    <img src="{{cow}}" style="width:70%;">
+                </td>
+                <td class="img" style="width:40%;">
+                    <img src="{{yprl}}" style="width:85%; margin-left:-5%;">
+                </td>
+                <td class="img" style="width:15%;">
+                    <img src="{{vsg}}" style="width:95%; margin-left:-40%;">
+                </td>
+                <td class="img" style="width:15%;">
+                    <img src="{{ia}}" style="width:65%;">
+                </td>
+            </tr>
+        </table>
     </div>
     <br>
-    <br>
-
-    <div class="text-container">
-        <br>
-        <br>
-        <p>
-            Cars have taken over our society in many ways giving us a new way of
-            transporting ourselves to different destinations. Because of the
-            nasty habit that cars are polluting the air, it has come to the
-            community's concern that we need to start finding new eco-friendly
-            ways of getting from one location to another.
-        </p>
-        <br>
-        <p>
-            Walking, cycling and scooting has been a good alternative to these
-            machines, however, not many people are willing to do this. So we
-            have decided to work with schools along with the Whittlesea Council
-            to encourage students to walk their way to school by
-            initialising a robot that follows lines. These lines make their way
-            to school. To be brief, the students can follow the robot to school.
-        </p>
-        <br>
-        <p>
-            The robot will use several sensors to detect the environment around
-            it and detect any obstacles and will respond accordingly. The robot
-            will also have an infared sensor underneath so that it can detect if
-            it is on the white line or not and stay on the white lines. It will
-            also be going at a slow pace so that the 'slow' walkers can still
-            keep up.
-        </p>
-        <br>
-        <p>
-            The robot will also be able to read QR codes which will give the
-            robot certain instructions and do those instructions.
-        </p>
-        <br>
-        <p>
-            Another great feature of the robot is that it will have a recharging
-            station at school which is vandalism-proof. The recharging station
-            will use eco-friendly ways to charge the robot so that it doesn't
-            cause extra pollution on top of the already-accumulating amount
-            in pollution.
-        </p>
-        <br>
-        <p>
-            It will also have GPS tracking which will allow parents know where
-            their children currently are. This will be in an application which
-            also check a variety of other vital things.
-        </p>
-        <br>
-        <p>
-            If you do have any questions or enquiries, please comment in the Posts
-            Feeds Section, link below or just contact us.
-        </p>
-        <br>
-        <br>
+    <div>
+        <table style="width:25%; margin-left:35%;">
+            <tr>
+                <td style="width:40%;">
+                   <h3>
+                       Follow Us Here:
+                   </h3>
+                </td>
+                <td>
+                    <a class="icon" href="https://github.com/rudrathegreat">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </td>
+                <td>
+                    <a class="icon" href="https://www.youtube.com/channel/UCMD4ZUhoBXZtWoKaL3l7_9w">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </td>
+                <td>
+                    <a class="icon" href="mailto:rudratheastronaut@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </td>
+            </tr>
+        </table>
     </div>
-    <br>
-    <br>
-    <br>
-
-    <div class="img-c">
-        <br>
-        <h1>Make a Difference Today</h1>
-        <a href="/posts/" class="btn-right">POSTS FEEDS</a>
-        <a href="/contacts/" class="btn">CONTACTS</a>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="footer">
-        <p>Copyright C 2018 - All Rights Reserved. Only Collaborators in the Team excluded</p>
-        <img src="{{ cow }}" width="253.75" height="79.5">
-        <img src="{{ yprl }}" width="375" height="80">
-        <img src="{{ mw }}" width="290.5" height="80">
-        <img src="{{ deakin }}" width="80" height="80">
-    </div>
+</div>
     {% endblock %}
 </body>
 </html>

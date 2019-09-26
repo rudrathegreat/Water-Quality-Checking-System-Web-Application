@@ -9,11 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{navCSS}}">
     <link rel="stylesheet" type="text/css" href="{{mainCSS}}">
-    <link rel="stylesheet" type="text/css" href="{{fontawesome}}">
     <link rel="stylesheet" type="text/css" href="{{socialIcons}}">
+    <link rel="stylesheet" type="text/css" href="{{fontawesome}}">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-    <title>Water Quality Checking System</title>
+    <title>Posts</title>
 </head>
 <body>
 <script>
@@ -22,7 +22,7 @@
         ('.img-container').css({'height': height + 'px'});
     })
 </script>
-    <div class="navbar">
+        <div class="navbar">
             <nav>
                 <ul>
                     <img src="{{logo}}">
@@ -69,94 +69,23 @@
                 </ul>
             </nav>
     </div>
-    <div class="img-container" style="background-image:url({{ river }});">
-        <h1>Water Quality Monitoring System</h1>
+    <div class="img-container" style="background-image:url({{ stars }});">
+        <h1>Posts Feeds Section</h1>
         <br>
-        <h2>Using Water Pollution Sensors to Help Save the Platypuses</h2>
+        <h2>Any Questions? Mention Here.</h2>
         <a class="learn-more" onclick="document.getElementById('description').scrollIntoView(true);"><i class="fal fa-chevron-down"></i></a>
+
     </div>
-    <div class="text-container" id="description" style="padding-bottom:5%;">
-        <table id="descriptionTable">
-            <tr>
-                <td class="img" style=""><img src="{{platypus1}}" style="margin-top:60%;"></td>
-                <td>
-                    <p>
-                        Water resources are getting more and more important with each passing
-                        day in case of survival of humanity. For this reason, assessing water
-                        resources’ quality and also monitoring them have attracted lots of
-                        attention in the recent years. Remote sensing has been growing widely
-                        in the last decade and its resources are very usable when it comes
-                        to water resources management.
-                    </p>
-                    <br>
-                    <p>
-                        The aim of this project is to install smart water sensors into local
-                        areas known to be habitats for platypus. The will utilise
-                        environmental sensors connected to BBC Microbit which will allow the
-                        sensors to withdraw and store water quality information which is
-                        displayed nearby at signed stations. The signed stations will display
-                        the relevant information and act as a point where emergency
-                        information can be sent via 4G networks to relevant authorities. The
-                        equipment is to be designed utilising small-scale electronics powered
-                        by solar panels, as well as the BBC Microbit and E-waste which will
-                        allow for local students and community engagement. This allows the
-                        project to act as an educational tool that can raise awareness of
-                        Stormwater pollution.
-                    </p>
-                    <br>
-                    <p>
-                        The Sensing Component measures the conductivity, pH and temperature
-                        values from the water on regular intervals. It then sends this data
-                        to another BBC Microbit via radio signals. The sensing component is
-                        placed in the water and powered by solar panels to make it gain
-                        clean energy.
-                    </p>
-                    <br>
-                    <p>
-                        Once data is received by the BBC MicroBit that is attached to an
-                        Arduino, the Arduino then transmits the data onto the 4G network,
-                        to make it available for further analysis. This component is
-                        attached to a display board which is located near a sidewalk close
-                        to the Plenty River. This board uses 4 LEDs indicators to show the
-                        water quality at a particular time. This board also educates
-                        information about the platypuses which live in the river. This
-                        component also uses solar panels to get power.
-                    </p>
-                    <br>
-                    <p>
-                        The Data Receiver and Storage Component consists of a BBC Microbit
-                        that receives the data from cloud using 4G network and then pass
-                        that data to Raspberry Pi via serial port using decoder settings
-                        ‘UTF-8’. The Raspberry Pi process the data and save it in the data
-                        storage location. Data is stored in 3 separate data storage
-                        locations for pH, Conductivity and Temperature.
-                    </p>
-                    <br>
-                    <p>
-                        The Water Quality Checking System allows the user to extract data
-                        from the database and process it using Matplotlib library to plot
-                        various graphs (Line, Pie, Scattered graphs etc.). The application
-                        process data in yearly and daily wise and allows user to view
-                        daily and yearly wise graphs for each data value (Temperature,
-                        Conductivity and pH).
-                    </p>
-                    <br>
-                    <p>
-                        If you do have any questions or enquiries, please comment in the Posts
-                        Feeds Section, link below or just contact us. All Data from the System
-                        is also here.
-                    </p>
-                    <br>
-                    <br>
-                    <a href="/md/" class="btn">VIEW LIVE MONITORING DATA</a>
-                </td>
-                <td class="img">
-                    <img src="{{platypus2}}" style="margin-bottom:150%;">
-                </td>
-            </tr>
-        </table>
-        
+    <div class="img-c" style="background:#fff; margin-bottom:23%; z-index:10000;">
+    <br>
+    <br>
+    <br>
+        <h4>{{message}}</h4>
+    <br>
+    <br>
+    <br>
     </div>
+
 <div class="footer" style="overflow-x:hidden;">
     <div id="footerTable" style="padding-top:2%;">
         <table style="width:80%; margin-left:16%;">
@@ -232,6 +161,7 @@
         </table>
     </div>
 </div>
+    </div>
     {% endblock %}
 </body>
 </html>
