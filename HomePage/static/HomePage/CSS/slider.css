@@ -1,0 +1,144 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+.slider{
+	overflow: hidden;
+	height: 100%;
+}
+
+.slider figure .slide{
+	width: 20%;
+	float: left;
+	height: 100%;
+    background-position:center;
+    background-repeat:no-repeat;
+	background-size:cover;
+	padding-top:2.5%;
+	padding-bottom:2.5%;
+}
+
+
+.slider figure{
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 30s slidy infinite;
+
+}
+
+@keyframes slidy{
+	0%{
+		left: 0%
+	}
+
+	10%{
+		left: 0%;
+	}
+
+	12%{
+		left: -100%;
+	}
+
+	22%{
+		left: -100%;
+	}
+
+	24%{
+		left: -200%;
+	}
+
+	34%{
+		left: -200%;
+	}
+
+	36%{
+		left: -300%;
+	}
+
+	46%{
+		left: -300%;
+	}
+
+	48%{
+		left: -400%;
+	}
+
+	58%{
+		left: -400%;
+	}
+
+	60%{
+		left: -300%;
+	}
+
+	70%{
+		left: -300%;
+	}
+
+	72%{
+		left: -200%;
+	}
+
+	82%{
+		left: -200%;
+	}
+
+	84%{
+		left: -100%;
+	}
+
+	94%{
+		left: -100%;
+	}
+
+	96%{
+		left: 0%;
+	}
+
+	100%{
+		left: 0%;
+	}
+}
+
+.slider figure .slide h1 {
+    font-size:3em;
+    font-family: 'Gothic A1', sans serif;
+    text-align:center;
+    color:#fff;
+}
+
+.slider figure .slide h2 {
+    margin-top:-17px;
+    font-size:1.7em;
+    font-family: 'Gothic A1', sans serif;
+    text-align:center;
+    font-weight:400;
+    color:#fff;
+}
+
+.slider figure .slide .btn {
+    position:center;
+    display: inline-block;
+    width:200px;
+    font-weight:bold;
+    padding:10px;
+    color:#fff;
+    border: 4px solid #fff;
+    text-align:center;
+    outline:none;
+    text-decoration:none;
+    margin-left:43.25%;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+.slider figure .slide .btn:hover, .btn:active {
+    text-align:center;
+    background-color:#fff;
+    color:#000;
+    transition:background-color 0.3s ease-in, color 0.3s ease-in;
+
+}

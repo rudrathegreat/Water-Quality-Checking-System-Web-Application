@@ -1,0 +1,56 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+.icon{
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: #f1f1f1;
+  margin-top: 0px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #3498db;
+  overflow: hidden;
+  position: relative;
+}
+.icon i{
+  line-height: 80px;
+  font-size: 40px;
+  padding-left:19.5px;
+  transition: 0.2s linear;
+  margin-right:23%;
+}
+.icon:hover i{
+  transform: scale(1);
+  color: #f1f1f1;
+
+}
+.icon::before{
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #3498db;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+  z-index:0;
+}
+.icon:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+@keyframes aaa {
+  0%{
+    left: -110%;
+    top: 90%;
+  }50%{
+    left: 10%;
+    top: -30%;
+  }100%{
+    top: -10%;
+    left: -10%;
+  }
+}
