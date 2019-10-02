@@ -2,7 +2,6 @@ from django.conf.urls import url
 from . import views
 from django.conf.urls.static import static
 from WaterQualitySystem import settings
-
 static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
