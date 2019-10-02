@@ -285,7 +285,6 @@ a {
 .imgc {
     margin:0 auto;
     width:1366px;
-    background-image:url({{ river }});
     height:60%;
     background-position:center;
     background-repeat:no-repeat;
@@ -345,7 +344,6 @@ a {
 }
 .image-c {
     width:1366px;
-    background-image:url({{ crosswalk }});
     height:70%;
     background-position:center;
     background-repeat:no-repeat;
@@ -407,7 +405,6 @@ a {
 
 .image-container {
     width:1366px;
-    background-image:url({{ rain }});
     height:70%;
     background-position:center;
     background-repeat:no-repeat;
@@ -469,7 +466,6 @@ a {
 
 .img-c {
     width:1366px;
-    background-image:url({{ stars }});
     height:70%;
     background-position:center;
     background-repeat:no-repeat;
