@@ -2,6 +2,7 @@ html {
     margin:0 auto;
     padding:0;
     scroll-behavior:smooth;
+    overflow-x:hidden;
 }
 
 * {
@@ -137,8 +138,6 @@ a {
   margin-left:0%;
   background: #3498db;
   padding: 30px 25px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
   text-align: center;
   color: #fff;
 }
@@ -220,13 +219,14 @@ table img {
 .footer {
     width:100%;
     background-color:#000;
-    height:50%;
     background-position:center;
     background-repeat:no-repeat;
 	background-size:cover;
 	position:fixed;
 	bottom:0;
 	z-index:-1;
+	padding-bottom:2%;
+	overflow:hidden;
 }
 
 .footer h3 {
@@ -282,3 +282,111 @@ table img {
     transform: translate(0%, 40%);
     transition: 0.4s ease-out;
 }
+
+#socialMedia #github {
+    margin-left:50%;
+}
+
+#socialMedia #youtube {
+    margin-right:50%;
+}
+
+@media screen and (max-width: 768px) {
+    #socialMedia #github {
+        margin-left:25%;
+    }
+    #socialMedia #youtube {
+        margin-right:25%;
+    }
+    #phoneData {
+        margin-left:30%;
+    }
+    .wrapper {
+        width:90%;
+    }
+    .wrapper .left {
+        width:80%;
+        padding: 15px 10px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .wrapper .left img {
+        margin-top:120%;
+        margin-bottom:20%;
+    }
+}
+@media screen and (max-width: 410px) {
+    #phoneData {
+        display:inline-block;
+        margin-top:25%;
+        margin-left:-105%;
+        text-align:center;
+
+    }
+    #emailData {
+        align-items:center;
+        text-align:center;
+        width:100%;
+        margin-left:-5%;
+
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .wrapper {
+        width:100%;
+        border:none;
+        border-top: 3px solid #000;
+        border-bottom: 3px solid #000;
+    }
+}
+
+@media screen and (max-width: 285px) {
+    #informationTitle, #projectsTitle {
+        letter-spacing:1px;
+    }
+    #socialMedia #github {
+        margin-left:0%;
+    }
+    #socialMedia #youtube {
+        margin-right:0%;
+    }
+    #recent {
+        width:100%;
+        text-align:center;
+        margin-left:-0%;
+    }
+    #mostViewed {
+        margin-top:40%;
+        margin-left:-100%;
+        width:100%;
+        text-align:center;
+    }
+}
+#footerTable table {
+    width:80%;
+    margin-left:16%;
+}
+
+#linksTable table {
+    width:25%;
+    margin-left:35%;
+}
+
+@media screen and (max-width:495px) {
+    #footerTable table {
+        width:90%;
+        float:left;
+        margin-left:0%;
+    }
+    #linksTable table {
+        width:35%;
+        margin-left:10%;
+    }
+    .img-container {
+        padding-top:40%;
+    }
+}
+
+

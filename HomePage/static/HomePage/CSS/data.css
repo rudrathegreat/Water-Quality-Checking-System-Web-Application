@@ -7,6 +7,7 @@ html {
     margin:0 auto;
 	padding:0;
 	scroll-behavior:smooth;
+	overflow-x:hidden;
 }
 
 ::-webkit-scrollbar {
@@ -610,4 +611,47 @@ a {
 .text-container ul {
     float:left;
     list-style:disc inside;
+}
+
+#tableLinksMobile {
+    display:none;
+}
+
+@media screen and (max-width:435px) {
+    #tableLinks {
+        display:none;
+    }
+    #tableLinksMobile {
+        display:flex;
+        flex-direction:column;
+        width:100%;
+    }
+    #tableLinksMobile tr, #tableLinksMobile td {
+        width:100%;
+    }
+}
+
+#footerTable table {
+    width:80%;
+    margin-left:16%;
+}
+
+#linksTable table {
+    width:25%;
+    margin-left:35%;
+}
+
+@media screen and (max-width:495px) {
+    #footerTable table {
+        width:90%;
+        float:left;
+        margin-left:0%;
+    }
+    #linksTable table {
+        width:35%;
+        margin-left:10%;
+    }
+    .img-container {
+        padding-top:40%;
+    }
 }

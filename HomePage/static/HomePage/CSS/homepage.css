@@ -12,37 +12,12 @@ html {
 ::-webkit-scrollbar {
     width:0px;
 }
-#slider {
-    overflow:hidden;
-}
-#slider figure image {
-    width:70%;
-    float:left;
-}
-#slider figure {
-    position:relative;
-    width:300%;
-    margin:0;
-    left:0;
-    text-align:center;
-}
-#slider figure h1 {
-    font-size:3em;
-    font-family: 'Gothic A1', sans serif;
-    text-align:center;
-    color:#fff;
-}
-#slider figure
-.content {
-    margin-top:50px;
-}
 .img-container {
     padding-top:22%;
-    padding-bottom:19%;
-    margin: 0 auto;
+    padding-bottom:20%;
     width:100%;
     height:80%;
-    background-position:center;
+    background-position:center 0px;
     background-repeat:no-repeat;
 	background-size:cover;
 	background-attachment:fixed;
@@ -174,7 +149,7 @@ a {
     margin-top:-17px;
     padding-left:3%;
 	padding-right:3%;
-    font-size:30px;
+    font-size:25px;
     font-family: 'Questrial', sans serif;
     font-weight:400;
     color:#79b9cf;
@@ -184,9 +159,8 @@ a {
     padding-top:2%;
     padding-bottom:1%;
     padding-left:5%;
-    font-size:30px;
+    font-size:25px;
     font-family: 'Questrial', sans serif;
-    font-weight:400;
     color:#79b9cf;
 
 }
@@ -454,13 +428,13 @@ table img {
 .footer {
     width:100%;
     background-color:#000;
-    height:50%;
     background-position:center;
     background-repeat:no-repeat;
 	background-size:cover;
 	position:fixed;
 	bottom:0;
 	z-index:-1;
+	overflow:hidden;
 }
 
 .footer h3 {
@@ -513,6 +487,67 @@ table img {
 }
 
 #title h1 {
-    font-size:4em;
+    font-size:5em;
 }
+@media screen and (max-width: 768px) {
+    .slider figure .slide .sliderHeading {
+    font-size:2em;
+    }
+    .slider figure .slide .blob {
+        font-size:1.3em;
+    }
+    .img-container {
+        padding-top:30%;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .slider figure .slide #RUMS {
+        font-size:1.7em;
+    }
+    .slider figure .slide #WQCSBlob {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:940px) {
+    #divBeforeFooter .btn-right {
+        display:none;
+    }
+    #divBeforeFooter #mobile {
+        display:inline-block;
+    }
+    #contacts {
+        padding-left:25%;
+    }
+    #posts {
+        padding-right:23%;
+    }
+}
+
+#footerTable table {
+    width:80%;
+    margin-left:16%;
+}
+
+#linksTable table {
+    width:25%;
+    margin-left:35%;
+}
+
+@media screen and (max-width:495px) {
+    #footerTable table {
+        width:90%;
+        float:left;
+        margin-left:0%;
+    }
+    #linksTable table {
+        width:35%;
+        margin-left:10%;
+    }
+    .img-container {
+        padding-top:40%;
+    }
+}
+
 

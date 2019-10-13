@@ -19,10 +19,10 @@ nav {
 nav img {
     float:left;
     margin-left:3%;
-    margin-top:1%;
+    margin-top:0.5%;
     padding-right:5%;
-    width:10%;
-    height:10%;
+    width:3%;
+    align-items:center;
 }
 
 nav ul .navoption {
@@ -49,6 +49,7 @@ nav ul li {
     float:left;
     list-style:none;
     position:relative;
+    padding-top:1.5%;
 }
 nav ul li a {
     transition:color 0.2s ease-out;
@@ -94,11 +95,11 @@ nav a:hover {
 @keyframes navmenu {
     0% {
         opacity:0;
-        top:105px;
+        top:110%;
     }
     100% {
         opacity:1;
-        top:95px;
+        top:100%;
     }
 }
 nav ul li ul li a {
@@ -130,6 +131,113 @@ nav ul li ul li:hover ul {
     position:absolute;
     width:190px;
     left:185px;
-    top:0px;
+    top:100px;
     animation:navmenu 300ms;
+}
+
+nav ul li a i {
+    font-size:0px;
+}
+
+nav .downButton {
+    display:none;
+}
+
+@media screen and (max-width: 768px) {
+    #monitoringData:hover ul {
+        display:none;
+    }
+    nav ul li a i {
+        font-size:1.2em;
+    }
+  .line {
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: 7px;
+  }
+  #hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+  #nav-links {
+      top:100px;
+      padding-top:5%;
+    display:flex;
+    position: fixed;
+    background: #fff;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -12%);
+    -webkit-clip-path: circle(100px at 90% -12%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  nav img {
+    width:8%;
+    margin-top:0%;
+    z-index:20000000;
+  }
+  #nav-links.open {
+  padding-top:5%;
+  top:100px;
+  z-index:1;
+    -webkit-clip-path: circle(1500px at 90% -10%);
+    pointer-events: all;
+  }
+
+  #nav-links .navoption {
+  padding:3%;
+  opacity: 0;
+  transition:opacity 0.5s ease;
+
+  }
+
+  #nav-links .navoption.fade {
+  padding:3%;
+    opacity: 1;
+
+    transition: opacity 0.5s ease;
+  }
+    nav ul li:hover ul {
+        align-items:center;
+        position:relative;
+        flex-direction:column;
+        color:#c1c1c1;
+        display:flex;
+        animation: navmenu-mobile 300ms;
+        width:100%;
+        padding:10px 0px;
+    }
+    nav ul li:hover .long-menu {
+        flex-direction:column;
+        width:100%;
+        position:relative;
+        align-items:center;
+        padding:10px 8px;
+        color:#c1c1c1;
+        display:flex;
+        animation: navmenu-mobile 300ms;
+    }
+    @keyframes navmenu-mobile {
+         0% {
+            opacity:0;
+            top:0%;
+        }
+        100% {
+            opacity:1;
+            top:0%;
+        }
+    }
+
+
+
+
+
+
 }

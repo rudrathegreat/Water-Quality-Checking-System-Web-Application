@@ -560,3 +560,55 @@ a {
 .footerTable {
     width:100%;
 }
+
+#gallery {
+    width:80%;
+    display:none;
+}
+
+#gallery img {
+    width:70%;
+    align-items:center;
+    display:flex;
+
+}
+.galleryImg {
+    width:50%;
+}
+
+@media screen and (max-width: 768px) {
+    #gallery{
+        display:block;
+    }
+    #descriptionTable .img {
+        display:none;
+    }
+    #descriptionTable #information {
+        width:100%;
+    }
+}
+
+#footerTable table {
+    width:80%;
+    margin-left:16%;
+}
+
+#linksTable table {
+    width:25%;
+    margin-left:35%;
+}
+
+@media screen and (max-width:495px) {
+    #footerTable table {
+        width:90%;
+        float:left;
+        margin-left:0%;
+    }
+    #linksTable table {
+        width:35%;
+        margin-left:10%;
+    }
+    .img-container {
+        padding-top:40%;
+    }
+}

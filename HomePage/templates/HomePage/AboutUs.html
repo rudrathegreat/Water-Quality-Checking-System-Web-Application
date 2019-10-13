@@ -15,23 +15,82 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&display=swap" rel="stylesheet">
     <title>About Us</title>
 </head>
 <body>
-    <script>
-    $(document).ready(function {
-        var height = window.height();
-        ('.img-container').css({'height': height + 'px'});
-    })
+<script>
+        $(document).ready(function(){
+            resizeFooter();
+            var width = $(window).width();
+        })
+        $(window).resize(function(){
+            resizeFooter();
+            var width = $(window).width();
+        });
+
+    function resizeFooter() {
+        var width = $(window).width();
+            if(width!=2560) {
+                marginBottom = Math.pow(((2560-width)/250), 2)+23;
+                paddingTop = ((2560-width)/150)+1;
+            }
+            else {
+                marginBottom = 23;
+            }
+            $('#info').css({'margin-bottom': marginBottom + '%'});
+            $('#footerTable').css({'padding-top': paddingTop + '%'});
+
+    }
 </script>
-    <div class="navbar">
+<script>
+        $(window).scroll(function(){
+        var wScroll = $(window).scrollTop();
+        $('#title').css({'background-position': 'center ' + -(wScroll*0.1) + 'px'});
+        $('#content').css({'top': 'center ' + -5+(wScroll*0.3) + 'px'});
+    })
+    $(document).ready(function() {
+        lowerLogoInNavbar();
+    })
+    $(window).resize(function(){
+        lowerLogoInNavbar();
+    });
+    function lowerLogoInNavbar() {
+        var width = $(window).width();
+            if(width!=2650) {
+                marginAboveLogo = Math.pow(((2650-width)/1000), 1.5)+0.5;
+            }
+            else {
+                marginAboveLogo = 0.5;
+            }
+            $('#logo').css({'margin-top': marginAboveLogo + '%'});
+    }
+
+</script>
+<script>
+    function openMenu() {
+        if($("#hamburger").hasClass("on")) {
+            $("#hamburger").removeClass("on");
+            $("#nav-links").removeClass("open");
+            $(".navoption").removeClass("fade");
+        }
+        else {
+            $("#hamburger").addClass("on");
+            $("#nav-links").addClass("open");
+            $(".navoption").addClass("fade");
+        }
+
+    }
+</script>
+<div class="navbar">
             <nav>
-                <ul>
-                    <img src="{{logo}}">
+                <img src="{{logo}}" id="logo">
+                <ul id="nav-links">
+
                     <li class="navoption"><a href="../" class="navelement">Home</a></li>
                     <li class="navoption"><a href="/about-us/" class="navelement">About</a>
                     </li>
-                    <li class="navoption"><a href="javascript:void(1);" class="navelement">Projects</a>
+                    <li class="navoption menu"><a href="javascript:void(1);" class="navelement">Projects <i class="fas fa-sort-down"></i></a>
                         <ul class="long-menu">
                             <li><a href="/wqcs/">Water Quality Checking System</a></li>
                             <li><a href="/rums/">Rainwater Usage Monitoring System</a></li>
@@ -39,21 +98,21 @@
                             <li><a href="/tkp/">The Kangaroo Project</a></li>
                         </ul>
                     </li>
-                     <li class="navoption"><a href="/md/" class="navelement">Monitoring Data</a>
+                     <li class="navoption menu" id="monitoringData"><a href="/md/" class="navelement">Monitoring Data</a>
                         <ul>
-                            <li><a href="#" class="submenu">Temperature</a>
+                            <li><a href="javascript:void(1);" class="submenu">Temperature <i class="fas fa-sort-down"></i></a>
                                 <ul>
                                     <li><a href="/data/last24HoursTemperature/" target="_blank">Last 24 Hours</a></li>
                                     <li><a href="/data/lastYearTemperature/" target="_blank">Last Year</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#" class="submenu">Conductivity</a>
+                            <li><a href="javascript:void(1);" class="submenu">Conductivity <i class="fas fa-sort-down"></i></a>
                                 <ul>
                                     <li><a href="/data/last24HoursConductivity/" target="_blank">Last 24 Hours</a></li>
                                     <li><a href="/data/lastYearConductivity/" target="_blank">Last Year</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#" class="submenu-2">pH</a>
+                            <li><a href="javascript:void(1);" class="submenu-2">pH <i class="fas fa-sort-down"></i></a>
                                 <ul>
                                     <li><a href="/data/last24HourspH/" target="_blank">Last 24 Hours</a></li>
                                     <li><a href="/data/lastYearpH/" target="_blank">Last Year</a></li>
@@ -61,7 +120,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="navoption"><a href="#" class="navelement">Contact Us</a>
+                    <li class="navoption menu"><a href="javascript:void(1);" class="navelement">Contact Us <i class="fas fa-sort-down"></i></a>
                         <ul>
                             <li><a href="/posts/">Post Feeds</a></li>
                             <li><a href="/contacts/">Contacts</a></li>
@@ -69,7 +128,14 @@
                     </li>
                     <li class="navoption"><a href="/admin" target="_blank" class="navelement">Admin</a></li>
                 </ul>
+                <div id="hamburger" onclick="openMenu();">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
             </nav>
+
+
 </div>
     <div class="img-container" style="background-image:url({{ background }});">
         <h1>About Us</h1>
@@ -79,22 +145,21 @@
     </div>
     <div id="info" style="position:relative; padding-top:3.5%; margin-bottom:24%; background:#fff; height:30%; padding-bottom:0.5%;">
 
-    <div class="wrapper" style="margin-bottom:3%;">
+    <div class="wrapper" style="margin-bottom:3%;" id="divBeforeFooter">
     <div class="left">
-        <img src="{{rudra}}"
-        alt="user" width="300">
+        <img src="{{rudra}}" alt="user" style="width:70%; padding-bottom:5%;">
         <h4>Rudra</h4>
         <p>Student</p>
     </div>
     <div class="right">
         <div class="info">
-            <h3>Information</h3>
+            <h3 id="informationTitle">Information</h3>
             <div class="info_data">
-                 <div class="data">
+                 <div class="data" id="emailData">
                     <h4>Email</h4>
                     <p>rudratheastonaut@gmail.com</p>
                  </div>
-                 <div class="data">
+                 <div class="data" id="phoneData">
                    <h4>Phone</h4>
                     <p>Unavailable</p>
               </div>
@@ -102,13 +167,13 @@
         </div>
 
       <div class="projects">
-            <h3>Projects</h3>
+            <h3 id="projectsTitle">Projects</h3>
             <div class="projects_data">
-                 <div class="data">
+                 <div class="data" id="recent">
                     <h4>Recent</h4>
                     <p>The Kangaroo Project</p>
                  </div>
-                 <div class="data">
+                 <div class="data" id="mostViewed">
                    <h4>Most Viewed</h4>
                     <p>Robot Walking School Bus</p>
               </div>
@@ -119,12 +184,12 @@
             <table id="socialMedia">
                 <tr>
                     <td>
-                        <a class="icon" href="https://github.com/rudrathegreat" style="margin-left:50%;">
+                        <a class="icon" href="https://github.com/rudrathegreat" style="" id="github">
                             <i class="fab fa-github"></i>
                         </a>
                     </td>
                     <td>
-                        <a class="icon" href="https://www.youtube.com/channel/UCMD4ZUhoBXZtWoKaL3l7_9w" style="">
+                        <a class="icon" href="https://www.youtube.com/channel/UCMD4ZUhoBXZtWoKaL3l7_9w" style="" id="youtube">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </td>
@@ -136,7 +201,7 @@
     </div>
 <div class="footer" style="overflow-x:hidden;">
     <div id="footerTable" style="padding-top:2%;">
-        <table style="width:80%; margin-left:16%;">
+        <table style="">
             <tr>
                 <td class="img">
                     <img src="{{wts}}" style="width:90%;">
@@ -182,8 +247,8 @@
         </table>
     </div>
     <br>
-    <div>
-        <table style="width:25%; margin-left:35%;">
+    <div id="linksTable">
+        <table style="">
             <tr>
                 <td style="width:40%;">
                    <h3>

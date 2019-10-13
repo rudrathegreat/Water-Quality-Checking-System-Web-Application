@@ -518,3 +518,34 @@ table {
 #title h1 {
     font-size:4em;
 }
+
+@media screen and (max-width:768px) {
+    .img-container {
+        padding-top:30%;
+    }
+}
+
+#footerTable table {
+    width:80%;
+    margin-left:16%;
+}
+
+#linksTable table {
+    width:25%;
+    margin-left:35%;
+}
+
+@media screen and (max-width:495px) {
+    #footerTable table {
+        width:90%;
+        float:left;
+        margin-left:0%;
+    }
+    #linksTable table {
+        width:35%;
+        margin-left:10%;
+    }
+    .img-container {
+        padding-top:40%;
+    }
+}

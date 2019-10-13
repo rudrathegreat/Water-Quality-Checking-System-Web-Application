@@ -15,7 +15,7 @@ context = {
     'mw': static('HomePage/melbournew.png'),
     'yprl': static('HomePage/yprl.png'),
     'rudra': static('HomePage/Rudra.png'),
-    'logo': static('HomePage/satms.jpg'),
+    'logo': static('HomePage/Logo.jpg'),
     'navCSS': static('HomePage/CSS/navbar.css'),
     'kangaroo': static('HomePage/kangaroo.jpg'),
     'socialIcons': static('HomePage/CSS/social-icons.css'),
@@ -27,7 +27,8 @@ context = {
     'vsg': static('HomePage/vsg.png'),
     'lsc': static('HomePage/lsc.png'),
     'mu': static('HomePage/mu.png'),
-    'wts': static('HomePage/wts.png')
+    'wts': static('HomePage/wts.png'),
+    'navbarJS': static('HomePage/JS/navbar.js')
 
 }
 
