@@ -12,6 +12,11 @@ html {
 ::-webkit-scrollbar {
     width:0px;
 }
+
+#divBeforeFooter #mobile {
+	display:none;
+}
+
 .img-container {
     padding-top:22%;
     padding-bottom:20%;
