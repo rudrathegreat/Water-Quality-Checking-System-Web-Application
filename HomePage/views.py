@@ -41,6 +41,7 @@ def index(request):
 
 def AboutUs(request):
     context['mainCSS'] = static('HomePage/CSS/aboutus.css')
+    context['r3'] = static('HomePage/r3.jpg')
     return render(request, template_name='HomePage/AboutUs.html', context=context)
 
 
@@ -54,7 +55,7 @@ def WQCS(request):
 def HKWTS(request):
     context['mainCSS'] = static('HomePage/CSS/HKWTS.css')
     context['litter'] = static('HomePage/litter.jpg')
-    context['robot'] = static('HomePage/robot.jpg')
+    context['robot'] = static('HomePage/r3.jpg')
     return render(request, template_name='HomePage/HKWTS.html', context=context)
 
 
@@ -87,3 +88,7 @@ def tkp(request):
     context['kangaroo1'] = static('HomePage/kangaroo1.jpg')
     context['kangaroo2'] = static('HomePage/kangaroo2.jpg')
     return render(request, template_name='HomePage/TKP.html', context=context)
+
+def projects(request):
+    context['mainCSS'] = static('HomePage/CSS/projects.css')
+    return render(request, template_name='HomePage/projects.html', context=context)

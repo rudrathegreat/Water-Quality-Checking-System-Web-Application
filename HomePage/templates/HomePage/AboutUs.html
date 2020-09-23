@@ -10,109 +10,48 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{mainCSS}}">
     <link rel="stylesheet" type="text/css" href="{{navCSS}}">
-    <link rel="stylesheet" type="text/css" href="{{socialIcons}}">
-    <link rel="stylesheet" type="text/css" href="{{fontawesome}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&display=swap" rel="stylesheet">
-    <title>About Us</title>
+    <title>MPL Makers Club | About Us</title>
 </head>
 <body>
-<script>
-        $(document).ready(function(){
-            resizeFooter();
-            var width = $(window).width();
-        })
-        $(window).resize(function(){
-            resizeFooter();
-            var width = $(window).width();
-        });
-
-    function resizeFooter() {
-        var width = $(window).width();
-            if(width!=2560) {
-                marginBottom = Math.pow(((2560-width)/250), 2)+23;
-                paddingTop = ((2560-width)/150)+1;
-            }
-            else {
-                marginBottom = 23;
-            }
-            $('#info').css({'margin-bottom': marginBottom + '%'});
-            $('#footerTable').css({'padding-top': paddingTop + '%'});
-
-    }
-</script>
-<script>
-        $(window).scroll(function(){
-        var wScroll = $(window).scrollTop();
-        $('#title').css({'background-position': 'center ' + -(wScroll*0.1) + 'px'});
-        $('#content').css({'top': 'center ' + -5+(wScroll*0.3) + 'px'});
-    })
-    $(document).ready(function() {
-        lowerLogoInNavbar();
-    })
-    $(window).resize(function(){
-        lowerLogoInNavbar();
-    });
-    function lowerLogoInNavbar() {
-        var width = $(window).width();
-            if(width!=2650) {
-                marginAboveLogo = Math.pow(((2650-width)/1000), 1.5)+0.5;
-            }
-            else {
-                marginAboveLogo = 0.5;
-            }
-            $('#logo').css({'margin-top': marginAboveLogo + '%'});
-    }
-
-</script>
-<script>
-    function openMenu() {
-        if($("#hamburger").hasClass("on")) {
-            $("#hamburger").removeClass("on");
-            $("#nav-links").removeClass("open");
-            $(".navoption").removeClass("fade");
-        }
-        else {
-            $("#hamburger").addClass("on");
-            $("#nav-links").addClass("open");
-            $(".navoption").addClass("fade");
-        }
-
-    }
-</script>
-<div class="navbar">
-            <nav>
-                <img src="{{logo}}" id="logo">
-                <ul id="nav-links">
+    <header>
+        <input type="checkbox" class="nav-toggle" id="nav-toggle">
+        <div class="hamburger">
+            <div class="bar"></div>
+        </div>
+        <img src="{{logo}}">
+        <nav class="nav-desktop">
+            <ul id="nav-links">
 
                     <li class="navoption"><a href="../" class="navelement">Home</a></li>
                     <li class="navoption"><a href="/about-us/" class="navelement">About</a>
                     </li>
                     <li class="navoption menu"><a href="javascript:void(1);" class="navelement">Projects <i class="fas fa-sort-down"></i></a>
                         <ul class="long-menu">
-                            <li><a href="/wqcs/">Water Quality Checking System</a></li>
-                            <li><a href="/rums/">Rainwater Usage Monitoring System</a></li>
-                            <li><a href="/hkwts/">Robot Walking School Bus</a></li>
-                            <li><a href="/tkp/">The Kangaroo Project</a></li>
+                            <li><a href="/wqcs/" class="dropdown" style="width:20vw;">Water Quality Checking System</a></li>
+                            <li><a href="/rums/" class="dropdown" style="width:20vw;">Rainwater Usage Monitoring System</a></li>
+                            <li><a href="/hkwts/" class="dropdown" style="width:20vw;">Robot Walking School Bus</a></li>
+                            <li><a href="/tkp/" class="dropdown" style="width:20vw;">The Kangaroo Project</a></li>
                         </ul>
                     </li>
-                     <li class="navoption menu" id="monitoringData"><a href="/md/" class="navelement">Monitoring Data</a>
+                     <li class="navoption menu" id="monitoringData"><a href="/md/" class="navelement">Data</a>
                         <ul>
-                            <li><a href="javascript:void(1);" class="submenu">Temperature <i class="fas fa-sort-down"></i></a>
+                            <li><a href="javascript:void(1);" class="submenu dropdown" style="width:10vw;">Temperature <i class="fas fa-sort-down"></i></a>
                                 <ul>
                                     <li><a href="/data/last24HoursTemperature/" target="_blank">Last 24 Hours</a></li>
                                     <li><a href="/data/lastYearTemperature/" target="_blank">Last Year</a></li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(1);" class="submenu">Conductivity <i class="fas fa-sort-down"></i></a>
+                            <li><a href="javascript:void(1);" class="submenu dropdown" style="width:10vw;">Conductivity <i class="fas fa-sort-down"></i></a>
                                 <ul>
                                     <li><a href="/data/last24HoursConductivity/" target="_blank">Last 24 Hours</a></li>
                                     <li><a href="/data/lastYearConductivity/" target="_blank">Last Year</a></li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(1);" class="submenu-2">pH <i class="fas fa-sort-down"></i></a>
+                            <li><a href="javascript:void(1);" class="submenu-2 dropdown" style="width:10vw;">pH <i class="fas fa-sort-down"></i></a>
                                 <ul>
                                     <li><a href="/data/last24HourspH/" target="_blank">Last 24 Hours</a></li>
                                     <li><a href="/data/lastYearpH/" target="_blank">Last Year</a></li>
@@ -120,160 +59,167 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="navoption menu"><a href="javascript:void(1);" class="navelement">Contact Us <i class="fas fa-sort-down"></i></a>
+                    <li class="navoption menu"><a href="javascript:void(1);" class="navelement">Contacts<i class="fas fa-sort-down"></i></a>
                         <ul>
-                            <li><a href="/posts/">Post Feeds</a></li>
-                            <li><a href="/contacts/">Contacts</a></li>
+                            <li><a href="/posts/" class="dropdown" style="width:10vw;">Post Feeds</a></li>
+                            <li><a href="/contacts/" class="dropdown" style="width:10vw;">Contacts</a></li>
                         </ul>
                     </li>
                     <li class="navoption"><a href="/admin" target="_blank" class="navelement">Admin</a></li>
                 </ul>
-                <div id="hamburger" onclick="openMenu();">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
             </nav>
-
-
-</div>
-    <div class="img-container" style="background-image:url({{ background }});">
-        <h1>About Us</h1>
-        <br>
-        <h2>Meet the Team</h2>
-        <a class="learn-more" onclick="document.getElementById('info').scrollIntoView(true);"><i class="fas fa-chevron-down"></i></a>
-    </div>
-    <div id="info" style="position:relative; padding-top:3.5%; margin-bottom:24%; background:#fff; height:30%; padding-bottom:0.5%;">
-
-    <div class="wrapper" style="margin-bottom:3%;" id="divBeforeFooter">
-    <div class="left">
-        <img src="{{rudra}}" alt="user" style="width:70%; padding-bottom:5%;">
-        <h4>Rudra</h4>
-        <p>Student</p>
-    </div>
-    <div class="right">
-        <div class="info">
-            <h3 id="informationTitle">Information</h3>
-            <div class="info_data">
-                 <div class="data" id="emailData">
-                    <h4>Email</h4>
-                    <p>rudratheastonaut@gmail.com</p>
-                 </div>
-                 <div class="data" id="phoneData">
-                   <h4>Phone</h4>
-                    <p>Unavailable</p>
-              </div>
-            </div>
+            <nav class="nav-mobile">
+            <ul class="nav-list">
+                <li class="nav-list-element"><a href="../" class="nav-link">Home</a></li>
+                <li class="nav-list-element"><a href="/about-us/" class="nav-link">About</a></li>
+                <li class="nav-list-element"><a href="/projects/" class="nav-link">Projects</a></li>
+                <li class="nav-list-element"><a href="/md/" class="nav-link">Data</a></li>
+                <li class="nav-list-element"><a href="/contacts/" class="nav-link">Contacts</a></li>
+                <li class="nav-list-element"><a href="/admin" class="nav-link">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="title" style="background-image:url({{ background }});">
+        <div class="container">
+            <h1 class="brand">About Us</h1>
+            <h2 class="subtitle">Meet the Team</h2>
+            <a class="link-to-about" onclick="document.getElementById('quote').scrollIntoView(true);">
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
-
-      <div class="projects">
-            <h3 id="projectsTitle">Projects</h3>
-            <div class="projects_data">
-                 <div class="data" id="recent">
-                    <h4>Recent</h4>
-                    <p>The Kangaroo Project</p>
-                 </div>
-                 <div class="data" id="mostViewed">
-                   <h4>Most Viewed</h4>
-                    <p>Robot Walking School Bus</p>
-              </div>
-            </div>
+    </div>
+    <div class="quote" id="quote">
+        <h1>"</h1>
+        <div class="container">
+            <h2>They had put an enormous amount of effort into it.</h2>
+            <h3><i>- Craig Reucassel</i></h3>
+            <p><i>Host of ABC's 'War on Waste'</i></p>
         </div>
-
-        <div>
-            <table id="socialMedia">
+    </div>
+    <div class="explanation">
+        <div class="container">
+            <table class="desktop">
                 <tr>
                     <td>
-                        <a class="icon" href="https://github.com/rudrathegreat" style="" id="github">
+                        <p>That was
+                            <mark class="highlight">Craig Reucassel</mark>
+                                , host of <mark class="highlight"> ABC's <i>'War on Waste'</i></mark>.
+                                Last year (2019), he was being interviewed in an ABC radio session about the results for the <mark class="highlight">Victorian Design Waste Challenge</mark> and what his thoughts were on some of the projects.
+                                . He mentioned our project (The Robot Walking School Bus) during the radio session, saying <mark class="highlight"><i>'[we] had put an enormous amount of effort into it.'</i></mark>.</p>
+                            <p>You can find the link to the radio session <a href="https://www.abc.net.au/radionational/programs/drive/winners-of-the-victorian-design-challenge-on-their-giant-compos/10917276">here.</a></p>
+                            <p>Read more about the Robot Walking School Bus <a href="/hkwts/">here.</a></p>
+                    </td>
+                    <td><img src="{{r3}}"></td>
+                </tr>
+            </table>
+            <table class="mobile">
+                <tr>
+                    <td>
+                        <p>That was
+                            <mark class="highlight">Craig Reucassel</mark>
+                            , host of <mark class="highlight"> ABC's <i>'War on Waste'</i></mark>.
+                            Last year (2019), he was being interviewed in an ABC radio session about the results for the <mark class="highlight">Victorian Design Waste Challenge</mark> and what his thoughts were on some of the projects.
+                            . He mentioned our project (The Robot Walking School Bus) during the radio session, saying <mark class="highlight"><i>'[we] had put an enormous amount of effort into it.'</i></mark>.</p>
+                        <p>You can find the link to the radio session <a href="https://www.abc.net.au/radionational/programs/drive/winners-of-the-victorian-design-challenge-on-their-giant-compos/10917276">here.</a></p>
+                        <p>Read more about the Robot Walking School Bus <a href="/hkwts/">here.</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="{{r3}}"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="us" style="background-image:url({{ background }});">
+        <div class="container">
+            <h1>Who are We?</h1>
+            <p>We are a group of like-minded students making a change in our local municipality. We are making this change by developing innovative solutions to the most debated environmental problems in the municipality. The Mill Park Library Maker's Club, in association with the Whittlesea Council, YPRL, Victorian State Government, Inspiring Australia initiative, The University of Melbourne, RMIT University, Deakin University, Yellowfin, Whittlesea Tech School , Melbourne Water and Lalor Secondary College are solving some of the most challenging environmental problems including -</p>
+            <p>Using GPS trackers to monitor and save kangaroos</p>
+            <p>Encouraging kids to walk to school by following a robot</p>
+            <p>Monitoring the water quality in the Plenty River to save various wildlife species</p>
+            <p>Monitoring how efficiently we are using rainwater</p>
+        </div>
+    </div>
+    <div class="team">
+        <div class="container">
+            <h1>Meet the Team</h1>
+            <table>
+                <tr>
+                    <td>
+                        <img src="{{rudra}}">
+                        <h2>Rudra S</h2>
+                        <h3>Member</h3>
+                        <p>Love Astronomy, Coding, biodiversity, writing, reading</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<div class="footer">
+        <div class="container">
+            <table class="sponsors">
+                <tr class="sponsors-row">
+                    <td class="sponsors-cell">
+                        <img src="{{wts}}" style="">
+                    </td>
+                    <td class="sponsors-cell">
+                        <img src="{{ mu }}" style="">
+                    </td>
+                    <td class="sponsors-cell">
+                        <img src="{{ mw }}" style="">
+                    </td>
+                    <td class="sponsors-cell">
+                        <img src="{{ deakin }}" style="">
+                    </td>
+                    <td class="sponsors-cell">
+                        <img src="{{ RMIT }}" style="">
+                    </td>
+                    <td class="sponsors-cell">
+                        <img src="{{ yf }}" style="">
+                    </td>
+                    <td class="sponsors-cell">
+                        <img src="{{ lsc }}" style="">
+                    </td>
+                </tr>
+            </table>
+            <p class="copyright">Copyright &copy 2020. Mill Park Library Makers Club. All Rights Reserved.</p>
+            <table class="orgs">
+                <tr class="orgs-row">
+                    <td class="orgs-cell">
+                        <img src="{{cow}}">
+                    </td>
+                    <td class="orgs-cell">
+                        <img src="{{yprl}}" style="">
+                    </td>
+                    <td class="orgs-cell">
+                        <img src="{{vsg}}" style="">
+                    </td>
+                    <td class="orgs-cell">
+                        <img src="{{ia}}" style="">
+                    </td>
+                </tr>
+            </table>
+            <table class="social-media">
+                <tr class="social-media-row">
+                    <td class="social-media-cell">
+                        <a class="icon" href="https://github.com/rudrathegreat">
                             <i class="fab fa-github"></i>
                         </a>
                     </td>
-                    <td>
-                        <a class="icon" href="https://www.youtube.com/channel/UCMD4ZUhoBXZtWoKaL3l7_9w" style="" id="youtube">
+                    <td class="social-media-cell">
+                        <a class="icon" href="https://www.youtube.com/channel/UCMD4ZUhoBXZtWoKaL3l7_9w">
                             <i class="fab fa-youtube"></i>
+                        </a>
+                    </td>
+                    <td class="social-media-cell">
+                        <a class="icon" href="mailto:rudratheastronaut@gmail.com">
+                            <i class="fas fa-envelope"></i>
                         </a>
                     </td>
                 </tr>
             </table>
         </div>
-      </div>
     </div>
-    </div>
-<div class="footer" style="overflow-x:hidden;">
-    <div id="footerTable" style="padding-top:2%;">
-        <table style="">
-            <tr>
-                <td class="img">
-                    <img src="{{wts}}" style="width:90%;">
-                </td>
-                <td class="img" style="width:12%;">
-                    <img src="{{ mu }}" style="width:50%;">
-                </td>
-                <td class="img" style="width:17%;">
-                    <img src="{{ mw }}" style="width:70%; margin-left:-10%;">
-                </td>
-                <td class="img" style="width:7%;">
-                    <img src="{{ deakin }}" style="width:90%; margin-left:-70%;">
-                </td>
-                <td class="img" style="width:10%;">
-                    <img src="{{ RMIT }}" style="width:90%; margin-left:-35%;">
-                </td>
-                <td class="img">
-                    <img src="{{ yf }}" style="margin-left:-5%; width:40%;">
-                </td>
-                <td class="img" style="width:15%;">
-                    <img src="{{ lsc }}" style="width:70%; margin-left:-80%;">
-                </td>
-            </tr>
-        </table>
-    </div>
-    <p style="padding-top:1%;">Copyright &copy; 2018-2019 Mill Park Library Makers Club Team. All Rights Reserved</p>
-    <div>
-        <table style="width:40%; margin-left:29.75%;">
-            <tr>
-                <td class="img" style="width:30%;">
-                    <img src="{{cow}}" style="width:70%;">
-                </td>
-                <td class="img" style="width:40%;">
-                    <img src="{{yprl}}" style="width:85%; margin-left:-5%;">
-                </td>
-                <td class="img" style="width:15%;">
-                    <img src="{{vsg}}" style="width:95%; margin-left:-40%;">
-                </td>
-                <td class="img" style="width:15%;">
-                    <img src="{{ia}}" style="width:65%;">
-                </td>
-            </tr>
-        </table>
-    </div>
-    <br>
-    <div id="linksTable">
-        <table style="">
-            <tr>
-                <td style="width:40%;">
-                   <h3>
-                       Follow Us Here:
-                   </h3>
-                </td>
-                <td>
-                    <a class="icon" href="https://github.com/rudrathegreat">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </td>
-                <td>
-                    <a class="icon" href="https://www.youtube.com/channel/UCMD4ZUhoBXZtWoKaL3l7_9w">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </td>
-                <td>
-                    <a class="icon" href="mailto:rudratheastronaut@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </td>
-            </tr>
-        </table>
-    </div>
-</div>
     {% endblock %}
 </body>
 </html>

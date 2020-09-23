@@ -9,111 +9,48 @@
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{navCSS}}">
     <link rel="stylesheet" type="text/css" href="{{mainCSS}}">
-    <link rel="stylesheet" type="text/css" href="{{fontawesome}}">
-    <link rel="stylesheet" type="text/css" href="{{socialIcons}}">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <title>Robot Walking School Bus</title>
-    <style>
-
-    </style>
 </head>
-<script>
-        $(document).ready(function(){
-            resizeFooter();
-            var width = $(window).width();
-        })
-        $(window).resize(function(){
-            resizeFooter();
-            var width = $(window).width();
-        });
-
-    function resizeFooter() {
-        var width = $(window).width();
-            if(width!=2560) {
-                marginBottom = Math.pow(((2560-width)/300), 2.2)+23;
-                paddingTop = ((2560-width)/150)+1;
-            }
-            else {
-                marginBottom = 23;
-            }
-            $('#description').css({'margin-bottom': marginBottom + '%'});
-            $('#footerTable').css({'padding-top': paddingTop + '%'});
-
-    }
-</script>
-<script>
-        $(window).scroll(function(){
-        var wScroll = $(window).scrollTop();
-        $('#title').css({'background-position': 'center ' + -(wScroll*0.1) + 'px'});
-        $('#content').css({'top': 'center ' + -5+(wScroll*0.3) + 'px'});
-    })
-    $(document).ready(function() {
-        lowerLogoInNavbar();
-    })
-    $(window).resize(function(){
-        lowerLogoInNavbar();
-    });
-    function lowerLogoInNavbar() {
-        var width = $(window).width();
-            if(width!=2650) {
-                marginAboveLogo = Math.pow(((2650-width)/1000), 1.5)+0.5;
-            }
-            else {
-                marginAboveLogo = 0.5;
-            }
-            $('#logo').css({'margin-top': marginAboveLogo + '%'});
-    }
-
-</script>
-<script>
-    function openMenu() {
-        if($("#hamburger").hasClass("on")) {
-            $("#hamburger").removeClass("on");
-            $("#nav-links").removeClass("open");
-            $(".navoption").removeClass("fade");
-        }
-        else {
-            $("#hamburger").addClass("on");
-            $("#nav-links").addClass("open");
-            $(".navoption").addClass("fade");
-        }
-
-    }
-</script>
-<div class="navbar">
-            <nav>
-                <img src="{{logo}}" id="logo">
-                <ul id="nav-links">
+<body>
+    <header>
+        <input type="checkbox" class="nav-toggle" id="nav-toggle">
+        <div class="hamburger">
+            <div class="bar"></div>
+        </div>
+        <img src="{{logo}}">
+        <nav class="nav-desktop">
+            <ul id="nav-links">
 
                     <li class="navoption"><a href="../" class="navelement">Home</a></li>
                     <li class="navoption"><a href="/about-us/" class="navelement">About</a>
                     </li>
                     <li class="navoption menu"><a href="javascript:void(1);" class="navelement">Projects <i class="fas fa-sort-down"></i></a>
                         <ul class="long-menu">
-                            <li><a href="/wqcs/">Water Quality Checking System</a></li>
-                            <li><a href="/rums/">Rainwater Usage Monitoring System</a></li>
-                            <li><a href="/hkwts/">Robot Walking School Bus</a></li>
-                            <li><a href="/tkp/">The Kangaroo Project</a></li>
+                            <li><a href="/wqcs/" class="dropdown" style="width:20vw;">Water Quality Checking System</a></li>
+                            <li><a href="/rums/" class="dropdown" style="width:20vw;">Rainwater Usage Monitoring System</a></li>
+                            <li><a href="/hkwts/" class="dropdown" style="width:20vw;">Robot Walking School Bus</a></li>
+                            <li><a href="/tkp/" class="dropdown" style="width:20vw;">The Kangaroo Project</a></li>
                         </ul>
                     </li>
-                     <li class="navoption menu" id="monitoringData"><a href="/md/" class="navelement">Monitoring Data</a>
+                     <li class="navoption menu" id="monitoringData"><a href="/md/" class="navelement">Data</a>
                         <ul>
-                            <li><a href="javascript:void(1);" class="submenu">Temperature <i class="fas fa-sort-down"></i></a>
+                            <li><a href="javascript:void(1);" class="submenu dropdown" style="width:10vw;">Temperature <i class="fas fa-sort-down"></i></a>
                                 <ul>
                                     <li><a href="/data/last24HoursTemperature/" target="_blank">Last 24 Hours</a></li>
                                     <li><a href="/data/lastYearTemperature/" target="_blank">Last Year</a></li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(1);" class="submenu">Conductivity <i class="fas fa-sort-down"></i></a>
+                            <li><a href="javascript:void(1);" class="submenu dropdown" style="width:10vw;">Conductivity <i class="fas fa-sort-down"></i></a>
                                 <ul>
                                     <li><a href="/data/last24HoursConductivity/" target="_blank">Last 24 Hours</a></li>
                                     <li><a href="/data/lastYearConductivity/" target="_blank">Last Year</a></li>
                                 </ul>
                             </li>
-                            <li><a href="javascript:void(1);" class="submenu-2">pH <i class="fas fa-sort-down"></i></a>
+                            <li><a href="javascript:void(1);" class="submenu-2 dropdown" style="width:10vw;">pH <i class="fas fa-sort-down"></i></a>
                                 <ul>
                                     <li><a href="/data/last24HourspH/" target="_blank">Last 24 Hours</a></li>
                                     <li><a href="/data/lastYearpH/" target="_blank">Last Year</a></li>
@@ -121,244 +58,169 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="navoption menu"><a href="javascript:void(1);" class="navelement">Contact Us <i class="fas fa-sort-down"></i></a>
+                    <li class="navoption menu"><a href="javascript:void(1);" class="navelement">Contacts<i class="fas fa-sort-down"></i></a>
                         <ul>
-                            <li><a href="/posts/">Post Feeds</a></li>
-                            <li><a href="/contacts/">Contacts</a></li>
+                            <li><a href="/posts/" class="dropdown" style="width:10vw;">Post Feeds</a></li>
+                            <li><a href="/contacts/" class="dropdown" style="width:10vw;">Contacts</a></li>
                         </ul>
                     </li>
                     <li class="navoption"><a href="/admin" target="_blank" class="navelement">Admin</a></li>
                 </ul>
-                <div id="hamburger" onclick="openMenu();">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
             </nav>
+            <nav class="nav-mobile">
+            <ul class="nav-list">
+                <li class="nav-list-element"><a href="../" class="nav-link">Home</a></li>
+                <li class="nav-list-element"><a href="/about-us/" class="nav-link">About</a></li>
+                <li class="nav-list-element"><a href="/projects/" class="nav-link">Projects</a></li>
+                <li class="nav-list-element"><a href="/md/" class="nav-link">Data</a></li>
+                <li class="nav-list-element"><a href="/contacts/" class="nav-link">Contacts</a></li>
+                <li class="nav-list-element"><a href="/admin" class="nav-link">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="title" style="background-image:url({{ crosswalk }});">
+        <div class="container">
+            <h1 class="brand">Robot Walking School Bus</h1>
+            <h2 class="subtitle">Reducing Street Litter with a Line-Following Robot</h2>
+            <a class="link-to-about" onclick="document.getElementById('context').scrollIntoView(true);">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </div>
+<div class="context" id="context">
+    <div class="container">
+        <h1>Context</h1>
+        <p>Children today have less freedom to move around outdoors in comparison to previous generations. Anecdotally, this behaviour change is associated with the perceived risks associated with hazards such as street crime and high speed vehicular traffic. As a result of a sedentary lifestyle, children are becoming less healthy – both physically and mentally. In the near future, the development of self-driving vehicles may help to alleviate traffic congestion, but it is uncertain if these vehicles will encourage more students to walk and ride to school.
 
 
+        Parents today are very concerned about letting children walk to school. As a consequence, less than 20% of children walk or ride to school, whereas in the 1970’s up to 80% of children walked to school. This is giving rise to so called lifestyle diseases such as obesity and diabetes in children that were once relatively rare. Today, more than 25% of children are classified as obese. While junk food certainly plays a role, the inclusion of daily exercise is an important contributor to ameliorating this condition. One of the main reasons why children are not getting enough daily activity is because they are being chauffeured to and from school.
+
+
+        One alternative to the daily commute by car is for children to join a Walking School Bus. A Walking School Bus is managed by a responsible adult who walks with a group of children to school. The Bus travels along a predefined route and picks up children along the way at meeting points.s</p>
+    </div>
 </div>
-    <div class="img-container" style="background-image:url({{ crosswalk }});">
-        <h1>Robot Walking School Bus</h1>
-        <br>
-        <h2>Encouraging Kids to Walk to School by Following a Robot</h2>
-        <a class="learn-more" onclick="document.getElementById('description').scrollIntoView(true);"><i class="fas fa-chevron-down"></i></a>
-    </div>
-    <div class="text-container" id="description">
-        <table id="descriptionTable">
+<div class="aim">
+    <div class="container">
+        <h1>Aim</h1>
+        <table class="desktop">
             <tr>
-                <td class="img" style=""><img src="{{litter}}" style="margin-top:80%;"></td>
                 <td>
-                    <p>
-                        Children today have less freedom to move around outdoors in comparison to previous
-                        generations. Anecdotally, this behaviour change is associated with the perceived risks associated with
-                        hazards such as street crime and high speed vehicular traffic. As a result of a sedentary lifestyle,
-                        children are becoming less healthy – both physically and mentally. In the near future, the development
-                        of self-driving vehicles may help to alleviate traffic congestion, but it is uncertain if these vehicles will
-                        encourage more students to walk and ride to school.
-                    </p>
-                    <br>
-                    <p>
-                        Parents today are very concerned about letting
-                        children walk to school. As a consequence,
-                        less than 20% of children walk or ride to
-                        school, whereas in the 1970’s up to 80% of
-                        children walked to school. This is giving rise to
-                        so called lifestyle diseases such as obesity
-                        and diabetes in children that were once
-                        relatively rare. Today, more than 25% of
-                        children are classified as obese. While junk
-                        food certainly plays a role, the inclusion of
-                        daily exercise is an important contributor to
-                        ameliorating this condition. One of the main
-                        reasons why children are not getting enough
-                        daily activity is because they are being
-                        chauffeured to and from school.
-                    </p>
-                    <br>
-                    <p>
-                        One alternative to the daily commute by car is
-                        for children to join a Walking School Bus.
-                        A Walking School Bus is managed by a
-                        responsible adult who walks with a group of
-                        children to school. The Bus travels along a
-                        predefined route and picks up children along
-                        the way at meeting points.
-                    </p>
-                    <br>
-                    <p>
-                        We  have developed a Robot Walking School Bus to
-                        guide students safely to and from school. The Robot is designed to follow a painted line on the
-                        footpath. The Robot can also help students collect street litter and transport organic waste from home
-                        to school for composting.
-                    </p>
-                    <br>
-                    <p>
-                        Since the Robot was travelling to school the
-                        students added a carry-compartment for
-                        organic waste, such as kitchen scraps. The
-                        aim is to take vegetable waste to school every
-                        day for composting. Once organic waste is
-                        composted it can be added to a fruit tree
-                        orchard at the school. Produce from the
-                        orchard can also be re-distributed back to the
-                        student community using the Robot.
-                        Composting at school has many advantages
-                        [ref]. Schools can incorporate composting into
-                        sustainability teaching modules and
-                        composting reduces greenhouse gas
-                        emissions derived from the anaerobic
-                        decomposition of organic matter in landfills.
-                    </p>
-                    <br>
-                    <p>
-                        Students noticed along their route that there
-                        were often significant amounts of street litter.
-                        They added two additional compartments to
-                        the Robot, one for litter and one for recycling.
-                        They also added hand operated pickers to the
-                        robot (which look like robot hands) so that they
-                        could safely pick up litter along the way to
-                        school.
-                    </p>
-                    <br>
-                    <p>
-                        The chassis of the robot is the Wild Thumper
-                        6WD robot (Dagu) which is capable of carrying
-                        a 5kg weight at 7km/hr (Figure 1). The walking
-                        speed for children typically ranges from 3 to
-                        5km/hr depending on age and fitness. The
-                        chassis motors were controlled by a TReX
-                        Dual Motor speed controller (Pololu). The microcontroller (electronic brain) used to
-                        control the robot was a Particle electron 3G
-                        microcontroller (Particle). The Robot uses a digital camera to follow a
-                        painted yellow line on the footpath. Line
-                        sensing image analysis was provided by the
-                        OpenMV version M7 digital camera.
-                    </p>
-                    <br>
-                    <p>
-                        While the Robot is designed to operate in
-                        autonomous line following mode, it can also be
-                        manually steered by students to get around
-                        obstacles. BBC micro:bits (BBC) using
-                        Bluetooth wireless were used to communicate
-                        with the Robot. The BBC micro:bit uses an
-                        accelerometer to register left and right turns to
-                        steer the robot. Manual and autonomous
-                        modes were selected using buttons on the
-                        BBC micro:bit.
-                    </p>
-                    <br>
-                    <p>
-                        To make the robot more endearing, sounds
-                        were added to provide cues to navigation,
-                        other sensory interactions, and general robot
-                        sounds. The effect is similar to the audio cues
-                        associated with George Lucas’ R2D2. An
-                        Arduino microcontroller with an MP3 player
-                        shield was used to play sounds.
-                    </p>
-                    <br>
-                    <p>
-                        A Robot Walking School Bus may encourage
-                    more students to walk to school by making this
-                    form or transport more attractive and safe for
-                    students. The Robot also incorporates design
-                    features that help students collect street litter
-                    and compost organic waste.
-                    </p>
-                    <br>
-                    <p>
-                        If you do have any questions or enquiries, please comment in the Posts
-                        Feeds Section, link below or just contact us.
-                    </p>
+                    <p>We have developed a Robot Walking School Bus to guide students safely to and from school. The Robot is designed to follow a painted line on the footpath. The Robot can also help students collect street litter and transport organic waste from home to school for composting.</p>
+                    <p>Since the Robot was travelling to school the students added a carry-compartment for organic waste, such as kitchen scraps. The aim is to take vegetable waste to school every day for composting. Once organic waste is composted it can be added to a fruit tree orchard at the school. Produce from the orchard can also be re-distributed back to the student community using the Robot. Composting at school has many advantages [ref]. Schools can incorporate composting into sustainability teaching modules and composting reduces greenhouse gas emissions derived from the anaerobic decomposition of organic matter in landfills.</p>
                 </td>
-                <td class="img" style=""><img src="{{robot}}" style="margin-bottom:170%;"></td>
+                <td><img src="{{litter}}"></td>
             </tr>
         </table>
-        <table id="gallery">
+        <table class="mobile">
             <tr>
-                <td class="galleryImg" style=""><img src="{{litter}}" style=""></td>
-                <td class="galleryImg" style=""><img src="{{robot}}" style=""></td>
-            </tr>
-        </table>
-    </div>
-<div class="footer" style="overflow-x:hidden;">
-    <div id="footerTable" style="padding-top:2%;">
-        <table style="">
-            <tr>
-                <td class="img">
-                    <img src="{{wts}}" style="width:90%;">
-                </td>
-                <td class="img" style="width:12%;">
-                    <img src="{{ mu }}" style="width:50%;">
-                </td>
-                <td class="img" style="width:17%;">
-                    <img src="{{ mw }}" style="width:70%; margin-left:-10%;">
-                </td>
-                <td class="img" style="width:7%;">
-                    <img src="{{ deakin }}" style="width:90%; margin-left:-70%;">
-                </td>
-                <td class="img" style="width:10%;">
-                    <img src="{{ RMIT }}" style="width:90%; margin-left:-35%;">
-                </td>
-                <td class="img">
-                    <img src="{{ yf }}" style="margin-left:-5%; width:40%;">
-                </td>
-                <td class="img" style="width:15%;">
-                    <img src="{{ lsc }}" style="width:70%; margin-left:-80%;">
-                </td>
-            </tr>
-        </table>
-    </div>
-    <p style="padding-top:1%;">Copyright &copy; 2018-2019 Mill Park Library Makers Club Team. All Rights Reserved</p>
-    <div>
-        <table style="width:40%; margin-left:29.75%;">
-            <tr>
-                <td class="img" style="width:30%;">
-                    <img src="{{cow}}" style="width:70%;">
-                </td>
-                <td class="img" style="width:40%;">
-                    <img src="{{yprl}}" style="width:85%; margin-left:-5%;">
-                </td>
-                <td class="img" style="width:15%;">
-                    <img src="{{vsg}}" style="width:95%; margin-left:-40%;">
-                </td>
-                <td class="img" style="width:15%;">
-                    <img src="{{ia}}" style="width:65%;">
-                </td>
-            </tr>
-        </table>
-    </div>
-    <br>
-    <div id="linksTable">
-        <table style="">
-            <tr>
-                <td style="width:40%;">
-                   <h3>
-                       Follow Us Here:
-                   </h3>
-                </td>
                 <td>
-                    <a class="icon" href="https://github.com/rudrathegreat">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </td>
-                <td>
-                    <a class="icon" href="https://www.youtube.com/channel/UCMD4ZUhoBXZtWoKaL3l7_9w">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </td>
-                <td>
-                    <a class="icon" href="mailto:rudratheastronaut@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+                    <p>We have developed a Robot Walking School Bus to guide students safely to and from school. The Robot is designed to follow a painted line on the footpath. The Robot can also help students collect street litter and transport organic waste from home to school for composting.</p>
+                    <p>Since the Robot was travelling to school the students added a carry-compartment for organic waste, such as kitchen scraps. The aim is to take vegetable waste to school every day for composting. Once organic waste is composted it can be added to a fruit tree orchard at the school. Produce from the orchard can also be re-distributed back to the student community using the Robot. Composting at school has many advantages [ref]. Schools can incorporate composting into sustainability teaching modules and composting reduces greenhouse gas emissions derived from the anaerobic decomposition of organic matter in landfills.</p>
                 </td>
             </tr>
+            <tr><td><img src="{{litter}}"></td></tr>
         </table>
     </div>
 </div>
+<div class="design">
+    <div class="container">
+        <h1>Design and Implementation</h1>
+        <table class="desktop">
+            <tr>
+                <td><img src="{{robot}}"></td>
+                <td>
+                    <p>Students noticed along their route that there were often significant amounts of street litter. They added two additional compartments to the Robot, one for litter and one for recycling. They also added hand operated pickers to the robot (which look like robot hands) so that they could safely pick up litter along the way to school.</p>
+                    <p>The chassis of the robot is the Wild Thumper 6WD robot (Dagu) which is capable of carrying a 5kg weight at 7km/hr (Figure 1). The walking speed for children typically ranges from 3 to 5km/hr depending on age and fitness. The chassis motors were controlled by a TReX Dual Motor speed controller (Pololu). The microcontroller (electronic brain) used to control the robot was a Particle electron 3G microcontroller (Particle). The Robot uses a digital camera to follow a painted yellow line on the footpath. Line sensing image analysis was provided by the OpenMV version M7 digital camera.</p>
+                    <p>While the Robot is designed to operate in autonomous line following mode, it can also be manually steered by students to get around obstacles. BBC micro:bits (BBC) using Bluetooth wireless were used to communicate with the Robot. The BBC micro:bit uses an accelerometer to register left and right turns to steer the robot. Manual and autonomous modes were selected using buttons on the BBC micro:bit.</p>
+                    <p>To make the robot more endearing, sounds were added to provide cues to navigation, other sensory interactions, and general robot sounds. The effect is similar to the audio cues associated with George Lucas’ R2D2. An Arduino microcontroller with an MP3 player shield was used to play sounds.</p>
+                    <p>A Robot Walking School Bus may encourage more students to walk to school by making this form or transport more attractive and safe for students. The Robot also incorporates design features that help students collect street litter and compost organic waste.</p>
+                </td>
+            </tr>
+        </table>
+        <table class="mobile">
+            <tr>
+                <td>
+                    <p>Students noticed along their route that there were often significant amounts of street litter. They added two additional compartments to the Robot, one for litter and one for recycling. They also added hand operated pickers to the robot (which look like robot hands) so that they could safely pick up litter along the way to school.</p>
+                    <p>The chassis of the robot is the Wild Thumper 6WD robot (Dagu) which is capable of carrying a 5kg weight at 7km/hr (Figure 1). The walking speed for children typically ranges from 3 to 5km/hr depending on age and fitness. The chassis motors were controlled by a TReX Dual Motor speed controller (Pololu). The microcontroller (electronic brain) used to control the robot was a Particle electron 3G microcontroller (Particle). The Robot uses a digital camera to follow a painted yellow line on the footpath. Line sensing image analysis was provided by the OpenMV version M7 digital camera.</p>
+                    <p>While the Robot is designed to operate in autonomous line following mode, it can also be manually steered by students to get around obstacles. BBC micro:bits (BBC) using Bluetooth wireless were used to communicate with the Robot. The BBC micro:bit uses an accelerometer to register left and right turns to steer the robot. Manual and autonomous modes were selected using buttons on the BBC micro:bit.</p>
+                    <p>To make the robot more endearing, sounds were added to provide cues to navigation, other sensory interactions, and general robot sounds. The effect is similar to the audio cues associated with George Lucas’ R2D2. An Arduino microcontroller with an MP3 player shield was used to play sounds.</p>
+                    <p>A Robot Walking School Bus may encourage more students to walk to school by making this form or transport more attractive and safe for students. The Robot also incorporates design features that help students collect street litter and compost organic waste.</p>
+                </td>
+            </tr>
+            <tr><td><img src="{{robot}}"></td></tr>
+        </table>
+    </div>
+</div>
+<div class="comp">
+    <div class="container">
+        <h1><mark>Won</mark> the <mark>Victorian Design Waste Challenge 2019</mark></h1>
+    </div>
+</div>
+<div class="footer">
+        <div class="container">
+            <table class="sponsors">
+                <tr class="sponsors-row">
+                    <td class="sponsors-cell">
+                        <img src="{{wts}}" style="">
+                    </td>
+                    <td class="sponsors-cell">
+                        <img src="{{ mu }}" style="">
+                    </td>
+                    <td class="sponsors-cell">
+                        <img src="{{ mw }}" style="">
+                    </td>
+                    <td class="sponsors-cell">
+                        <img src="{{ deakin }}" style="">
+                    </td>
+                    <td class="sponsors-cell">
+                        <img src="{{ RMIT }}" style="">
+                    </td>
+                    <td class="sponsors-cell">
+                        <img src="{{ yf }}" style="">
+                    </td>
+                    <td class="sponsors-cell">
+                        <img src="{{ lsc }}" style="">
+                    </td>
+                </tr>
+            </table>
+            <p class="copyright">Copyright &copy 2020. Mill Park Library Makers Club. All Rights Reserved.</p>
+            <table class="orgs">
+                <tr class="orgs-row">
+                    <td class="orgs-cell">
+                        <img src="{{cow}}">
+                    </td>
+                    <td class="orgs-cell">
+                        <img src="{{yprl}}" style="">
+                    </td>
+                    <td class="orgs-cell">
+                        <img src="{{vsg}}" style="">
+                    </td>
+                    <td class="orgs-cell">
+                        <img src="{{ia}}" style="">
+                    </td>
+                </tr>
+            </table>
+            <table class="social-media">
+                <tr class="social-media-row">
+                    <td class="social-media-cell">
+                        <a class="icon" href="https://github.com/rudrathegreat">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </td>
+                    <td class="social-media-cell">
+                        <a class="icon" href="https://www.youtube.com/channel/UCMD4ZUhoBXZtWoKaL3l7_9w">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </td>
+                    <td class="social-media-cell">
+                        <a class="icon" href="mailto:rudratheastronaut@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
     {% endblock %}
 </body>
 </html>

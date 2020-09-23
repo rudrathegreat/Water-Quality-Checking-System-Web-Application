@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% block page %}
-    {% load staticfiles %}
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{mainCSS}}">
+    <link rel="stylesheet" type="text/css" href="{{navCSS}}">
     <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{navCSS}}">
-    <link rel="stylesheet" type="text/css" href="{{mainCSS}}">
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-    <title>The Kangaroo Project</title>
+    <title>Projects</title>
 </head>
 <body>
     <header>
@@ -71,87 +66,80 @@
             <ul class="nav-list">
                 <li class="nav-list-element"><a href="../" class="nav-link">Home</a></li>
                 <li class="nav-list-element"><a href="/about-us/" class="nav-link">About</a></li>
-                <li class="nav-list-element"><a href="/projects/" class="nav-link">Projects</a></li>
+                <li class="nav-list-element"><a class="nav-link">Projects</a></li>
                 <li class="nav-list-element"><a href="/md/" class="nav-link">Data</a></li>
                 <li class="nav-list-element"><a href="/contacts/" class="nav-link">Contacts</a></li>
                 <li class="nav-list-element"><a href="/admin" class="nav-link">Admin</a></li>
             </ul>
         </nav>
     </header>
-    <div class="title" style="background-image:url({{ kangaroo }});">
+    <div class="title" style="background-image:url({{ background }});">
         <div class="container">
-            <h1 class="brand">The Kangaroo Project</h1>
-            <h2 class="subtitle">Using GPS Trackers to Help Save the Kangaroos</h2>
-            <a class="link-to-about" onclick="document.getElementById('context').scrollIntoView(true);">
-                <i class="fas fa-chevron-down"></i>
-            </a>
+            <h1 class="brand">Projects</h1>
+            <h2 class="subtitle">Our Solutions to Environmental Problems</h2>
+            <a class="link-to-about" onclick="document.getElementById('about').scrollIntoView(true);">
+                <i class="fas fa-chevron-down"></i></a>
         </div>
     </div>
-<div class="context" id="context">
-    <div class="container">
-        <h1>Context</h1>
-        <p>Our community used to be home to thousands of kangaroos. They are Australia's national animal and have been respected for thousands of years.
-
-
-Since the Industrial Revolution, us humans have been colonising the planet exponentially, transforming the face of the Earth to something we are used to seeing everyday. The urban environment has been growing, and will be growing, until there is no more land left.
-
-
-In our community, the exponential growth of the urban environment has caused the kangaroos to loose territory, thus trapping them with nowhere to go. If the kangaroos get scared, they flee towards these corridors of green land. These corridors have many obstacles in them, but the most fatal and roads and highways. Drivers don't know when to slow down, because they do not know when and how quickly a kangaroo might be crossing the road.
-
-
-This results in fatal deaths and death tolls. Our community has the most death tolls in the state. We need to save our kangaroos. If they die, then this could cause a chain reaction in the rest of the ecosystem.</p>
+    <div class="projects" id="projects">
+        <div class="container">
+            <table class="desktop">
+                <tr>
+                    <td style="background-image:url({{river}});">
+                        <div class="overlay">
+                            <h1>Water Quality Monitoring System</h1>
+                            <h2>Using Water Pollution Sensors to Help Save Platypuses</h2>
+                            <a href="/wqcs/">Learn More</a>
+                        </div>
+                    </td>
+                    <td style="background-image:url({{rain}});">
+                        <div class="overlay">
+                            <h1>Rainwater Usage Monitoring System</h1>
+                            <h2>Monitoring How Efficiently We Are Using Rainwater</h2>
+                            <a href="/rums/">Learn More</a>
+                        </div>
+                    </td>
+                    <td style="background-image:url({{crosswalk}});">
+                        <div class="overlay">
+                            <h1>Robot Walking School Bus</h1>
+                            <h2>Reducing Street Litter with a Line-Following Robot</h2>
+                            <a href="/hkwts/">Learn More</a>
+                        </div>
+                    </td>
+                    <td style="background-image:url({{kangaroo}});">
+                        <div class="overlay">
+                            <h1>The Kangaroo Project</h1>
+                            <h2>Using GPS Trackers to Help Save the Kangaroos</h2>
+                            <a href="/tkp/">Learn More</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table class="mobile">
+                <tr><td style="background-image:url({{river}});"><div class="overlay">
+                    <h1>Water Quality Monitoring System</h1>
+                    <h2>Using Water Pollution Sensors to Help Save Platypuses</h2>
+                    <a href="/wqcs/">Learn More</a>
+                </div></td></tr>
+                <tr><td style="background-image:url({{rain}});"><div class="overlay">
+                    <h1>Rainwater Usage Monitoring System</h1>
+                    <h2>Monitoring How Efficiently We Are Using Rainwater</h2>
+                    <a href="/rums/">Learn More</a>
+                </div></td></tr>
+                <tr><td style="background-image:url({{crosswalk}});"><div class="overlay">
+                    <h1>Robot Walking School Bus</h1>
+                    <h2>Reducing Street Litter with a Line-Following Robot</h2>
+                    <a href="/hkwts/">Learn More</a>
+                </div></td></tr>
+                <tr><td style="background-image:url({{kangaroo}});"><div class="overlay">
+                    <h1>The Kangaroo Project</h1>
+                    <h2>Using GPS Trackers to Help Save the Kangaroos</h2>
+                    <a href="/tkp/">Learn More</a>
+                </div></td></tr>
+            </table>
+        </div>
     </div>
-</div>
-<div class="aim">
-    <div class="container">
-        <h1>Aim</h1>
-        <table class="desktop">
-            <tr>
-                <td>
-                    <p>We, along with many professors from various universities across the state, would like to make a change, and have proposed a solution to this ever-increasing issue.</p>
-                    <p>The Kangaroo Project is a project that uses GPS trackers attached on the Kangaroo to monitor the path and the current location of the kangaroo. If a kangaroo is close to a road, then speed signs will change the speed to 40km/h or less. All of this data is available on this website and in the future, in mobile apps.</p>
-                </td>
-                <td><img src="{{kangaroo1}}"></td>
-            </tr>
-        </table>
-        <table class="mobile">
-            <tr>
-                <td>
-                    <p>We, along with many professors from various universities across the state, would like to make a change, and have proposed a solution to this ever-increasing issue.</p>
-                    <p>The Kangaroo Project is a project that uses GPS trackers attached on the Kangaroo to monitor the path and the current location of the kangaroo. If a kangaroo is close to a road, then speed signs will change the speed to 40km/h or less. All of this data is available on this website and in the future, in mobile apps.</p>
-                </td>
-            </tr>
-            <tr><td><img src="{{kangaroo1}}"></td></tr>
-        </table>
-    </div>
-</div>
-<div class="design">
-    <div class="container">
-        <h1>Design and Implementation</h1>
-        <table class="desktop">
-            <tr>
-                <td><img src="{{kangaroo2}}"></td>
-                <td>
-                    <p>A PyCom Module is used to collect the GPS coordinates of the kangaroo in latitude and longitude. This data is then sent to a base station (i.e. another PyCom Module on top of a really high hill) using the LoRa Network. The PyCom Module at the base station uses serial communication to pass the data to the Particle Electron, which is then used to send the data to the Particle Cloud. The data is then stored into a database which is then displayed here! For the speed sign, the speed sign obtains data from the Particle Cloud. It then calculates how far away it is from the sign. If the kangaroo is close, then it will change the speed to 40km/h or lower.</p>
-                </td>
-            </tr>
-        </table>
-        <table class="mobile">
-            <tr>
-                <td>
-                    <p>A PyCom Module is used to collect the GPS coordinates of the kangaroo in latitude and longitude. This data is then sent to a base station (i.e. another PyCom Module on top of a really high hill) using the LoRa Network. The PyCom Module at the base station uses serial communication to pass the data to the Particle Electron, which is then used to send the data to the Particle Cloud. The data is then stored into a database which is then displayed here! For the speed sign, the speed sign obtains data from the Particle Cloud. It then calculates how far away it is from the sign. If the kangaroo is close, then it will change the speed to 40km/h or lower.</p>
-                </td>
-            </tr>
-            <tr><td><img src="{{kangaroo2}}"></td></tr>
-        </table>
-    </div>
-</div>
-<div class="comp">
-    <div class="container">
-        <h1>Presented at the <mark>Young People's Contribution to the Society</mark> in front of the <mark>Victorian Premier</mark></h1>
-    </div>
-</div>
-<div class="footer">
+    <div class="footer">
         <div class="container">
             <table class="sponsors">
                 <tr class="sponsors-row">
@@ -216,6 +204,5 @@ This results in fatal deaths and death tolls. Our community has the most death t
             </table>
         </div>
     </div>
-    {% endblock %}
 </body>
 </html>

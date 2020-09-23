@@ -4,20 +4,33 @@
 	text-decoration: none;
 }
 
+body {
+    font-family:sans-serif;
+}
+
 .slider{
 	overflow: hidden;
-	height: 100%;
+	height: 100vh;
+	margin:0;
 }
 
 .slider figure .slide{
 	width: 20%;
 	float: left;
-	height: 100%;
+	height: 100vh;
     background-position:center;
     background-repeat:no-repeat;
 	background-size:cover;
-	padding-top:2.5%;
-	padding-bottom:2.5%;
+	// padding-top:2.5%;
+	// padding-bottom:2.5%;
+}
+
+.slider figure .slide .container {
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
 }
 
 
@@ -105,22 +118,21 @@
 }
 
 .slider figure .slide h1 {
-    font-size:3em;
-    font-family: 'Gothic A1', sans serif;
+    font-size:4vw;
+    font-family: 'Questrial', sans-serif;
     text-align:center;
     color:#fff;
 }
 
 .slider figure .slide h2 {
-    margin-top:-17px;
-    font-size:1.7em;
-    font-family: 'Gothic A1', sans serif;
+    font-size:2vw;
+    font-family: 'Gothic A1', sans-serif;
     text-align:center;
     font-weight:400;
     color:#fff;
 }
 
-.slider figure .slide .btn {
+.slider figure .slide .slide-button {
     position:center;
     display: inline-block;
     width:200px;
@@ -131,11 +143,11 @@
     text-align:center;
     outline:none;
     text-decoration:none;
-    margin-left:43.25%;
+    margin-top:3vh;
     transition: background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
-.slider figure .slide .btn:hover, .btn:active {
+.slider figure .slide .slide-button:hover, .slide-button:active {
     text-align:center;
     background-color:#fff;
     color:#000;

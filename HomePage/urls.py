@@ -6,6 +6,7 @@ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 urlpatterns = [
+    url(r"^projects/$", views.projects, name="Projects page"),
     url(r"^$", views.index, name='Home Page'),
     url(r"^about-us/", views.AboutUs, name='About Us'),
     url(r"^wqcs/", views.WQCS, name='Water Quality Checking System'),
