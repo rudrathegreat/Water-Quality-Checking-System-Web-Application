@@ -111,6 +111,22 @@ body {
     color:#fff;
 }
 
+.contacts a {
+    font-size:1.5vw;
+    padding:1vh 2vw;
+    border:3px solid #fff;
+    text-transform:uppercase;
+    font-family:sans-serif;
+    font-weight:700;
+    transition:background-color 0.2s ease-in, color 0.2s ease-in;
+}
+
+.contacts a:hover {
+    background:#fff;
+    color:#000;
+    transition:background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
 .contacts h1 {
     font-size:4vw;
     font-family: 'Questrial', sans-serif;
@@ -119,6 +135,7 @@ body {
 .contacts h2 {
     font-size:2vw;
     font-family: 'Gothic A1', sans-serif;
+    padding-bottom:5vh;
 }
 
 .footer {
@@ -261,6 +278,10 @@ body {
     }
 
     .contacts h2 {
+        font-size:3vw;
+    }
+
+    .contacts a {
         font-size:3vw;
     }
 }
