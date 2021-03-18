@@ -10,7 +10,7 @@ kiwisolver==1.0.1
 MarkupSafe==1.0
 matplotlib==2.2.3
 numpy==1.15.1
-Pillow==6.2.0
+Pillow==8.1.1
 psycopg2==2.7.5
 pyparsing==2.2.0
 python-dateutil==2.7.3
